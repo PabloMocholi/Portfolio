@@ -1,4 +1,91 @@
 /*
+*   General
+*/
+
+:root{
+
+    font-family: 'Poppins', sans-serif;
+    --color-fondo: #E0E1DD;
+    --color-primario: #0D1B2A;
+    --color-secundario: #415A77;
+    --color-detalles: #1B263B;
+    --color-clarito: #778DA9;
+    background-color: var(--color-fondo);
+
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.HeaderPrincipal{
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+}
+
+.HeaderPrincipal-Nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.HeaderPrincipal-Nav-name{
+    font-weight: 700 ;
+    font-size: 1.3em;
+}
+
+.HeaderPrincipal-Nav-menu{
+    width: 40px;
+    height: 30px;
+}
+
+/*
 *   index.html
 */
+
+.BodyIndex{
+
+    height: 100vh;
+    background-color: black;
+}
+
+.TituloBienvenida{
+
+    color: white;
+    font-weight: 200;
+    font-size: 400%;
+    margin: 0;
+
+}
+
+.Explorar{
+    color: white;
+}
+
+/*
+*  Home
+*/
+
+.ImgenProyecto{
+    width: 100%;
+
+}
+
+
+
+/*
+*   Utilidades 
+*/
+
+.u-centrar {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
 
