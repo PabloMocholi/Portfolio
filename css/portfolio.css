@@ -17,6 +17,7 @@
 body{
     margin: 0;
     padding: 0;
+    color: var(--color-primario);
 }
 
 .HeaderPrincipal{
@@ -24,22 +25,24 @@ body{
     position: fixed;
     top: 0;
     width: 100%;
+    color: var(--color-primario);
+    background-color: var(--color-fondo);
 
 }
 
-.HeaderPrincipal-Nav{
+.HeaderPrincipal-nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
 }
 
-.HeaderPrincipal-Nav-name{
+.HeaderPrincipal-nav-name{
     font-weight: 700 ;
     font-size: 1.3em;
 }
 
-.HeaderPrincipal-Nav-menu{
+.HeaderPrincipal-nav-menu{
     width: 40px;
     height: 30px;
 }
@@ -71,9 +74,33 @@ body{
 *  Home
 */
 
+
+
 .ImgenProyecto{
     width: 100%;
 
+
+}
+
+.ChipsFiltro{
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    padding: 10px 5px 20px 5px; 
+
+}
+
+.ChipsFiltro-chip{
+    color: var(--color-fondo);
+    background-color: var(--color-clarito);
+    padding: 0.7rem;
+    border-radius: 10px;
+
+}
+
+.ChipsFiltro-chip--inverse{
+    background-color: var(--color-primario);
 }
 
 

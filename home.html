@@ -15,31 +15,119 @@
 
 <body>
 
-    <header class="HeaderPrincipal">  
-        <nav class="HeaderPrincipal-Nav">
+    <header class="HeaderPrincipal">
+        <nav class="HeaderPrincipal-nav">
 
-            <span class="HeaderPrincipal-Nav-name">Proyectos</span>
-            <img class="HeaderPrincipal-Nav-menu" src="./imgs/menu.png" alt="menu">
+            <span class="HeaderPrincipal-nav-name">Proyectos</span>
+            <img class="HeaderPrincipal-nav-menu" src="./imgs/menu.png" alt="menu">
 
         </nav>
     </header>
+
+
+    <main style="display: flex; flex-direction: column; margin-top: 70px; gap: 10px; padding: 10px;">
+
+        <section id="FallaSection">
+            <h3>Falla Immaterial 2022/2023</h3>
+
+
+        </section>
+
+
+        <section id="CeiSection">
+            <h3>Proyectos Máster</h3>
+
     
-
-    <main style="margin-top: 50px;">
-
-        <section >
-            <h3 style="font-weight: 200; margin:0; padding: 20px 20px 0px 20px;">La Falla Immaterial</h3>
-            <img class="ImgenProyecto" src="./imgs/SentMent.png" alt="sentment">
         </section>
-     
-        <section >
-            <h3 style="font-weight: 200; margin:0;padding: 20px 20px 0px 20px;">Proyectos Máster</h3>
-            <img class="ImgenProyecto" src="./imgs/cei.png" alt="sentment">
-        </section>
-      
 
     </main>
 
 </body>
+<script>
+
+    const FallaSection = document.getElementById("FallaSection");
+    const CeiSection = document.getElementById("CeiSection");
+    let ProyectosFalla = [];
+    let ProyectosCEI = [];
+
+    var url = "./db/proyectos.json";
+
+    // Uso de la función fetch
+    fetch(url)
+        .then(function (response) {
+            // Verificar si la solicitud fue exitosa (código de estado 200)
+            if (!response.ok) {
+                throw new Error("La solicitud no fue exitosa: " + response.status);
+            }
+            // Parsear la respuesta como JSON y retornar la promesa resultante
+            return response.json();
+        })
+        .then(function (data) {
+            // Manipular los datos obtenidos
+            console.log("Datos obtenidos:", data);
+
+            ProyectosFalla = data.filter((proyecto) => proyecto.categoria == "Falla");
+            ProyectosCEI = data.filter((proyecto) => proyecto.categoria == "CEI");
+            mostrarProyecto();
+
+        })
+
+
+    function mostrarProyecto() {
+
+        ProyectosFalla.forEach((p) => {
+
+            let tags = "";
+
+            p.etiquetas.forEach((e) => {
+
+                tags += `<span class="ChipsFiltro-chip">${e}</span>`
+
+            })
+
+
+            FallaSection.innerHTML += `<article style=" border-radius: 10px;">
+                <div>
+                    <h3
+                        style="background-color: #0D1B2A;font-weight: 200; margin:0; padding: 5px 20px 0px 5px; color: #E0E1DD;">
+                       ${p.nombre}</h3>
+                    <img class="ImgenProyecto" src=" ${p.imagen}" alt="sentment">
+                </div>
+
+                <div class="ChipsFiltro">
+                   ${tags}
+                </div>
+            </article>`;
+
+        })
+
+        ProyectosCEI.forEach((p) => {
+
+            let tags = "";
+
+            p.etiquetas.forEach((e) => {
+
+                tags += `<span class="ChipsFiltro-chip">${e}</span>`
+
+            })
+
+
+            CeiSection.innerHTML += `<article style=" border-radius: 10px;">
+                    <div>
+                       <h3 style="background-color: #0D1B2A;font-weight: 200; margin:0; padding: 5px 20px 0px 5px; color: #E0E1DD;">
+                       ${p.nombre}</h3>
+                       <img class="ImgenProyecto" src=" ${p.imagen}" alt="sentment">
+                    </div>
+
+                    <div class="ChipsFiltro">
+                       ${tags}
+                    </div>
+            </article>`;
+
+        })
+
+    }
+
+</script>
 
 </html>

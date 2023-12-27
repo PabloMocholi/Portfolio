@@ -1,0 +1,37 @@
+[
+    {
+        "categoria": "Falla",
+        "nombre": "Sent",
+        "imagen": "./imgs/sent.png",
+        "etiquetas": ["HTML", "JavaScript"]
+    },
+    {
+        "categoria": "Falla",
+        "nombre": "Ment",
+        "imagen": "./imgs/ment.png",
+        "etiquetas": ["Processing", "JavaScript", "P5.js", "Dades Obertes"]
+    },
+    {
+        "categoria": "Falla",
+        "nombre": "Proyecciones MUVIM",
+        "imagen": "./imgs/proyeccion.png",
+        "etiquetas": ["Processing","JavaScript", "P5.js", "Dades Obertes"]
+    },  {
+        "categoria": "CEI",
+        "nombre": "ChefConnect",
+        "imagen": "./imgs/chefconnect.png",
+        "etiquetas": ["HTML","CSS"]
+    },
+    {
+        "categoria": "CEI",
+        "nombre": "Nexus",
+        "imagen": "./imgs/nexus.png",
+        "etiquetas": ["HTML","CSS", "JavaScript"]
+    },
+    {
+        "categoria": "CEI",
+        "nombre": "ai-ritmo",
+        "imagen": "./imgs/airitmo.png",
+        "etiquetas": ["HTML","CSS","JavaScript"]
+    }
+]
