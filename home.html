@@ -15,119 +15,54 @@
 
 <body>
 
-    <header class="HeaderPrincipal">
+    <header class="HeaderPrincipal" id="header">
         <nav class="HeaderPrincipal-nav">
 
-            <span class="HeaderPrincipal-nav-name">Proyectos</span>
-            <img class="HeaderPrincipal-nav-menu" src="./imgs/menu.png" alt="menu">
+            <span class="HeaderPrincipal-nav-name u-bordeTexto">pxblo</span>
+            <img class="HeaderPrincipal-nav-menu" src="./imgs/menuwhite.png" alt="menu" onclick="menuMostrar()">
 
         </nav>
+        <section id="menu" class="HeaderPrincipal-sections  show">
+
+            <ul class="HeaderPrincipal-sections-lista">
+                <a class="HeaderPrincipal-sections-lista-link" href="#">
+                    <li>Proyectos</li>
+                </a>
+                <a class="HeaderPrincipal-sections-lista-link" href="">
+                    <li>Contacto</li>
+                </a>
+
+            </ul>
+        </section>
     </header>
 
-
-    <main style="display: flex; flex-direction: column; margin-top: 70px; gap: 10px; padding: 10px;">
-
+    <main class="ContenedorProyectos" id="main">
         <section id="FallaSection">
-            <h3>Falla Immaterial 2022/2023</h3>
-
-
+            <h3 class="ContenedorProyectos-apartado">Falla Immaterial 2022/2023</h3>
         </section>
-
-
         <section id="CeiSection">
-            <h3>Proyectos Máster</h3>
-
-    
+            <h3 class="ContenedorProyectos-apartado">Proyectos Máster</h3>
         </section>
-
     </main>
 
+    <section id="filtros" class="Filtros showFiltro">
+        <div style="position: relative;">
+            <span class="Filtros-tit">Filtrar
+                Proyectos</span>
+            <div id="filtrado" class="ChipsFiltro ChipsFiltro--filtrado">
+            </div>
+            <span class="Filtros-tit"
+                onclick="filtradoTags()">Filtrar</span>
+
+            <div onclick="filtroMostrar()" style="position: absolute; width: 20px; height: 50px; background-color: red; right: -20px; top:40%">
+
+            </div>
+        </div>
+       
+    </section>
+
+
 </body>
-<script>
-
-    const FallaSection = document.getElementById("FallaSection");
-    const CeiSection = document.getElementById("CeiSection");
-    let ProyectosFalla = [];
-    let ProyectosCEI = [];
-
-    var url = "./db/proyectos.json";
-
-    // Uso de la función fetch
-    fetch(url)
-        .then(function (response) {
-            // Verificar si la solicitud fue exitosa (código de estado 200)
-            if (!response.ok) {
-                throw new Error("La solicitud no fue exitosa: " + response.status);
-            }
-            // Parsear la respuesta como JSON y retornar la promesa resultante
-            return response.json();
-        })
-        .then(function (data) {
-            // Manipular los datos obtenidos
-            console.log("Datos obtenidos:", data);
-
-            ProyectosFalla = data.filter((proyecto) => proyecto.categoria == "Falla");
-            ProyectosCEI = data.filter((proyecto) => proyecto.categoria == "CEI");
-            mostrarProyecto();
-
-        })
-
-
-    function mostrarProyecto() {
-
-        ProyectosFalla.forEach((p) => {
-
-            let tags = "";
-
-            p.etiquetas.forEach((e) => {
-
-                tags += `<span class="ChipsFiltro-chip">${e}</span>`
-
-            })
-
-
-            FallaSection.innerHTML += `<article style=" border-radius: 10px;">
-                <div>
-                    <h3
-                        style="background-color: #0D1B2A;font-weight: 200; margin:0; padding: 5px 20px 0px 5px; color: #E0E1DD;">
-                       ${p.nombre}</h3>
-                    <img class="ImgenProyecto" src=" ${p.imagen}" alt="sentment">
-                </div>
-
-                <div class="ChipsFiltro">
-                   ${tags}
-                </div>
-            </article>`;
-
-        })
-
-        ProyectosCEI.forEach((p) => {
-
-            let tags = "";
-
-            p.etiquetas.forEach((e) => {
-
-                tags += `<span class="ChipsFiltro-chip">${e}</span>`
-
-            })
-
-
-            CeiSection.innerHTML += `<article style=" border-radius: 10px;">
-                    <div>
-                       <h3 style="background-color: #0D1B2A;font-weight: 200; margin:0; padding: 5px 20px 0px 5px; color: #E0E1DD;">
-                       ${p.nombre}</h3>
-                       <img class="ImgenProyecto" src=" ${p.imagen}" alt="sentment">
-                    </div>
-
-                    <div class="ChipsFiltro">
-                       ${tags}
-                    </div>
-            </article>`;
-
-        })
-
-    }
-
-</script>
+<script src="./js/home.js"></script>
 
 </html>

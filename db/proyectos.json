@@ -30,7 +30,7 @@
     },
     {
         "categoria": "CEI",
-        "nombre": "ai-ritmo",
+        "nombre": "AI-RITMO",
         "imagen": "./imgs/airitmo.png",
         "etiquetas": ["HTML","CSS","JavaScript"]
     }
