@@ -1,37 +1,56 @@
 [
     {
+        "id":1,
         "categoria": "Falla",
         "nombre": "Sent",
-        "imagen": "./imgs/sent.png",
-        "etiquetas": ["HTML", "JavaScript"]
+        "imagen": "./imgs/sentTit.png",
+        "etiquetas": ["HTML", "JavaScript"],
+        "descripcion":"SENT es una exploración sensorial, auditiva y sensitiva de la <i>mascletà</i> como elemento central de la identidad sonora de la ciudad de Valencia. Sirve como detonante de la muestra de un paisaje sonoro deconstruido y reconfigurado con el que podemos revisar cómo sentimos la mascletá más allá de la fiesta, como icono sonoro y vital de unas fiestas como las Fallas"
+        ,"detalles":["Uso de <i>Window: devicemotion event</i>","Uso de <i>Window: deviceorientation event</i>","Uso de <i>audioElement</i> para la reproducción de los petardos","Definición de 4 umbrales de movimiento a partir de la combinación de los parámetros de los eventos anteriores","Uso de contadores para registrar las interacciones de los usuarios","Uso de <i>resquestPermission</i> para permitir la interacción en iOS"]
+        ,"multimedia":["./imgs/sentTit.png","./imgs/sent.png"]
     },
     {
+        "id":2,
         "categoria": "Falla",
         "nombre": "Ment",
-        "imagen": "./imgs/ment.png",
-        "etiquetas": ["Processing", "JavaScript", "P5.js", "Dades Obertes"]
+        "imagen": "./imgs/mentTit.png",
+        "etiquetas": ["Processing", "JavaScript", "P5.js", "Dades Obertes"],
+        "descripcion":""
+        ,"detalles":["","","",""]
     },
     {
+        "id":3,
         "categoria": "Falla",
         "nombre": "Proyecciones MUVIM",
         "imagen": "./imgs/proyeccion.png",
-        "etiquetas": ["Processing","JavaScript", "P5.js", "Dades Obertes"]
+        "etiquetas": ["Processing","JavaScript", "P5.js", "Dades Obertes"],
+        "descripcion":""
+        ,"detalles":["","","",""]
     },  {
+        "id":4,
         "categoria": "CEI",
         "nombre": "ChefConnect",
         "imagen": "./imgs/chefconnect.png",
-        "etiquetas": ["HTML","CSS"]
+        "etiquetas": ["HTML","CSS"],
+        "descripcion":""
+        ,"detalles":["","","",""]
     },
     {
+        "id":5,
         "categoria": "CEI",
         "nombre": "Nexus",
         "imagen": "./imgs/nexus.png",
-        "etiquetas": ["HTML","CSS", "JavaScript"]
+        "etiquetas": ["HTML","CSS", "JavaScript"],
+        "descripcion":""
+        ,"detalles":["","","",""]
     },
     {
+        "id":6,
         "categoria": "CEI",
         "nombre": "AI-RITMO",
         "imagen": "./imgs/airitmo.png",
-        "etiquetas": ["HTML","CSS","JavaScript"]
+        "etiquetas": ["HTML","CSS","JavaScript"],
+        "descripcion":""
+        ,"detalles":["","","",""]
     }
 ]

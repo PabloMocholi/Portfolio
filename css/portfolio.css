@@ -158,7 +158,7 @@ body {
     background-color: white;
     padding: 0.5rem;
     border-radius: 10px;
-    font-size: 0.6em;
+    font-size: 0.7em;
 
 }
 
@@ -233,7 +233,6 @@ body {
 .isnot_shown {
 
     display: none;
-
 }
 
 /*filtros seleccionados*/
@@ -247,13 +246,21 @@ body {
     position: fixed;
     left: 50%;
     top: 50%;
-    transform: translate(-163%, -50%);
-    transition: all 1s;
+    transform: translate(60%, -50%);
+    transition: all 0.5s;
 
 }
 
 .showFiltro.active {
 
     transform: translate(-50%, -50%);
+
+}
+
+.insta {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 
 }

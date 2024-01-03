@@ -7,6 +7,9 @@ const main = document.getElementById("main");
 const filtrado = document.getElementById("filtrado");
 const filtros = document.getElementById("filtros");
 
+let menuActivo = false;
+let filtrosActivo = false;
+
 
 
 let proyectosFalla = [];
@@ -46,7 +49,7 @@ function mostrarProyecto() {
 
         })
 
-        nuevoHTML(fallaSection,p,tags);
+        nuevoHTML(fallaSection, p, tags);
 
     })
 
@@ -60,19 +63,47 @@ function mostrarProyecto() {
 
         })
 
-        nuevoHTML(ceiSection,p,tags);
+        nuevoHTML(ceiSection, p, tags);
     })
 
 }
 
 function menuMostrar() {
     menu.classList.toggle("active");
-    main.classList.toggle("u-blur");
+
+    if (menu.classList.contains("active")) {
+        main.classList.add("u-blur");
+        menuActivo = true;
+    } else{
+
+       if(!filtrosActivo){
+        main.classList.remove("u-blur");
+       } 
+       menuActivo = false;
+    }
+
+    console.log("menu", menuActivo)
+        
 }
 
-function filtroMostrar(){
+function filtroMostrar() {
     filtros.classList.toggle("active");
-    main.classList.toggle("u-blur");
+
+    if (filtros.classList.contains("active")) {
+
+        main.classList.add("u-blur");
+        filtrosActivo = true;
+    }
+    else{
+
+        if(!menuActivo){
+            main.classList.remove("u-blur");
+        }
+        filtrosActivo = false;
+    }
+
+    console.log("filtro",filtrosActivo)
+  
 }
 
 function getEtiquetasTotales(json) {
@@ -127,7 +158,7 @@ function filtradoTags() {
 
     fallaSection.innerHTML = `<h3 class="ContenedorProyectos-apartado">Falla Immaterial 2022/2023</h3>`;
     ceiSection.innerHTML = `<h3 class="ContenedorProyectos-apartado">Proyectos Máster</h3>`;
-  
+
     vectorActivos = [];
 
     let activos = document.querySelectorAll(".button_active");
@@ -137,15 +168,15 @@ function filtradoTags() {
 
     console.log(vectorActivos);
 
-    if(vectorActivos.length>0){
-        comparativa(proyectosFalla,fallaSection);
-        comparativa(proyectosCEI,ceiSection);
-    }else{
-        mostrarProyecto(); 
+    if (vectorActivos.length > 0) {
+        comparativa(proyectosFalla, fallaSection);
+        comparativa(proyectosCEI, ceiSection);
+    } else {
+        mostrarProyecto();
     }
 }
 
-function comparativa(proyectos,seccion){
+function comparativa(proyectos, seccion) {
 
     let encontrado = false;
 
@@ -157,7 +188,7 @@ function comparativa(proyectos,seccion){
         p.etiquetas.forEach((e) => {
 
             tags += `<span class="ChipsFiltro-chip ${e}">${e}</span>`
-            
+
             for (i = 0; i < vectorActivos.length; i++) {
                 if (e == vectorActivos[i])
                     encontrado = true;
@@ -165,25 +196,26 @@ function comparativa(proyectos,seccion){
 
         })
 
-        if(encontrado)
-            nuevoHTML(seccion,p,tags);
+        if (encontrado)
+            nuevoHTML(seccion, p, tags);
     })
 
 }
 
 
-function nuevoHTML(seccion,p,tags) {
+function nuevoHTML(seccion, p, tags) {
 
     seccion.innerHTML += `<article>
-    <div class="ContenedorProyectos-proyecto">
+    <a href="proyecto.html?id=${p.id}" style="text-decoration:none">
+        <div class="ContenedorProyectos-proyecto">
     
-    <div class="ContenedorProyectos-proyecto-fondo">
-    </div>
-    <h3 class="ContenedorProyectos-proyecto-titulo" >
-        ${p.nombre}</h3>
+            <div class="ContenedorProyectos-proyecto-fondo">
+            </div>
+            <h3 class="ContenedorProyectos-proyecto-titulo" >
+            ${p.nombre}</h3>
     
-    <img class="ContenedorProyectos-proyecto-imagen" src=" ${p.imagen}" alt="${p.nombre}">
-    </div>
+            <img class="ContenedorProyectos-proyecto-imagen" src=" ${p.imagen}" alt="${p.nombre}">
+        </div>
 
     <div class="ChipsFiltro">
     ${tags}
