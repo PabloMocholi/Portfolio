@@ -11,12 +11,44 @@
 
 <body class="BodyIndex">
     <div class=" u-centrar">
-        <h1 class="TituloBienvenida">Welcome</h1>
+        <h1 id="titIndex" class="TituloBienvenida"></h1><br>
         <a href="home.html">
-            <span class="Explorar">Explorar</span>
+            <span class="Explorar">Explora mi portfolio</span>
         </a>
-       
+
     </div>
+
+    <p id="demo"></p>
+
+    <script>
+        var i = 0;
+        const txt = '¡Bienvenido soy Pablo! :)';
+        const velocidad = 300;
+
+        window.onload = function () {
+            maquinaEscribir();
+        };
+
+        function maquinaEscribir() {
+            if (i < txt.length) {
+                document.getElementById("titIndex").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(maquinaEscribir, velocidad);
+            } else {
+
+                setTimeout(() => {
+                    i = 0;
+                    document.getElementById("titIndex").innerHTML = '';
+                    setTimeout(maquinaEscribir, 500);
+                }, 1000);
+            }
+            // Reiniciar la animación después de completar el texto
+
+        }
+
+
+
+    </script>
 </body>
 
 
