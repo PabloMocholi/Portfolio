@@ -7,6 +7,30 @@
     <link rel="stylesheet" href="./css/portfolio.css">
 
     <title>Welcome</title>
+    <style>
+        #titIndex::after {
+            content: '|';
+            /* Agrega un carácter de barra vertical al final del progreso para simular un cursor */
+            display: inline-block;
+            animation: parpadeo 1s infinite;
+            /* Añade una animación de parpadeo al cursor */
+        }
+
+        @keyframes parpadeo {
+
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 
 <body class="BodyIndex">
@@ -36,16 +60,16 @@
                 setTimeout(maquinaEscribir, velocidad);
             } else {
 
-                setTimeout(() => {
+                setTimeout(function () {
                     i = 0;
                     document.getElementById("titIndex").innerHTML = '';
-                    setTimeout(maquinaEscribir, 500);
+                    setTimeout(maquinaEscribir, 1000);
                 }, 1000);
             }
-            // Reiniciar la animación después de completar el texto
+            
 
         }
-
+        
 
 
     </script>
