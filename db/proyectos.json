@@ -7,7 +7,7 @@
         "etiquetas": ["HTML", "JavaScript"],
         "descripcion":"SENT es una exploración sensorial, auditiva y sensitiva de la <i>mascletà</i> como elemento central de la identidad sonora de la ciudad de Valencia. Sirve como detonante de la muestra de un paisaje sonoro deconstruido y reconfigurado con el que podemos revisar cómo sentimos la mascletá más allá de la fiesta, como icono sonoro y vital de unas fiestas como las Fallas"
         ,"detalles":["Uso de <i>Window: devicemotion event</i>","Uso de <i>Window: deviceorientation event</i>","Uso de <i>audioElement</i> para la reproducción de los petardos","Definición de 4 umbrales de movimiento a partir de la combinación de los parámetros de los eventos anteriores","Uso de contadores para registrar las interacciones de los usuarios","Uso de <i>resquestPermission</i> para permitir la interacción en iOS"]
-        ,"multimedia":["./imgs/sentTit.png","./imgs/sent.png"]
+        ,"multimedia":["./imgs/sentTit.png","./imgs/sent.png","./imgs/sent2.jpeg","./imgs/sent3.jpeg","./imgs/sent4.jpeg","./imgs/sent5.png"]
     },
     {
         "id":2,
@@ -15,8 +15,10 @@
         "nombre": "Ment",
         "imagen": "./imgs/mentTit.png",
         "etiquetas": ["Processing", "JavaScript", "P5.js", "Dades Obertes"],
-        "descripcion":""
-        ,"detalles":["","","",""]
+        "descripcion":"MENT explora desde la ausencia de sonido y la visualización de datos cómo suena la ciudad de Valencia el resto del año y cómo el estado interino de las Fallas nos sirve para catalizar una nueva forma de oír las ciudades. Una especie de racionalización gráfica y cuantitativa, con datos que generan un paisaje visual y urbano que hierve de actividad"
+        ,"detalles":["Extracción de datos de <i>' València al minut '</i> y del '<i>Portal de dades obertes del Ajuntament de València</i> '","Uso de la librería de P5.js para la representación gráfica","Uso de librería de P5.js para detectar y tratar la entrada de audio","Uso de fórmulas matemáticas para la deformación de las líneas en función de la cantidad de audio detectada","Creación una clase que generara líneas con los diferentes datos abiertos"]
+        ,"multimedia":["./imgs/ment1.png","./imgs/ment2.png","./imgs/ment3.png"]
+        
     },
     {
         "id":3,
@@ -24,8 +26,9 @@
         "nombre": "Proyecciones MUVIM",
         "imagen": "./imgs/proyeccion.png",
         "etiquetas": ["Processing","JavaScript", "P5.js", "Dades Obertes"],
-        "descripcion":""
-        ,"detalles":["","","",""]
+        "descripcion":"La Falla Immaterial 2023 contaba con una instalación en el '<i>Museo Valenciano de la Ilustración y de la Modernidad </i>' durante la temporada fallera de 2023. Esta instalación presentaba la versión completa de <i>MENT</i>, con un total de dos proyecciones interactivas que mostraban una imagen de la evolucón y actual estado de la ciudad de Valencia en términos de sostenibilidad. <br><br> La proyección frontal contaba con la misma estructura de líneas del apartado móvil de <i>MENT</i>, pero ahora mostraba la totalidad de barrios presentes en la ciudad de Valencia, combinado con elementos gráficos generados de modo aleatorio en tiempo real. Todo ello manteniendo la interacción del usuario a través del sonido gracias a unos micrófonos instalados en las immediaciones de la exposición <br><br> La proyección trasera muesra un histórico de la ciudad de Valencia, donde usando los barrios de la ciudad se muestran 5 datos que hacen referencia a factores socio-ambientales. De esta forma con una actualización en tiempo real se van observando como se comportan los distintos barrios. Finalmente, también se añadió un módulo de reconocimiento de voz que transcribía a tiempo real el contenido auditivo que detectaba por los micrófonos instalados "
+        ,"detalles":["Actualización y proyección de contenido en tiempo real","Uso de la librería de P5.js para la representación gráfica","Uso de librería de P5.js para detectar y tratar la entrada de audio","Uso de fórmulas matemáticas para la deformación de las líneas en función de la cantidad de audio detectada","Creación una clase compleja que generara líneas con los diferentes datos abiertos"]
+        ,"multimedia":["./imgs/muvim1.jpeg","./imgs/muvim2.jpeg","./imgs/muvim3.jpeg","./imgs/muvim4.jpeg"]
     },  {
         "id":4,
         "categoria": "CEI",

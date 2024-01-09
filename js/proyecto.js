@@ -6,6 +6,8 @@ const contenido = document.getElementById("contenidoProyecto");
 const galeria = document.getElementById("galeria");
 
 const videosSent = document.getElementById("videosSent");
+const videosMent = document.getElementById("videosMent");
+const videosMuvim = document.getElementById("videosMuvim");
 let proyectoElegido;
 
 let contador = 0;
@@ -69,14 +71,18 @@ function rellenar() {
               <span style="font-size:140%; font-weight:300">Multimedia</span> <br><br>
             <section id="multimedia">
 
-            </section>    
-            <div style="display:flex; justify-content:space-around">
-                <button onclick="pasarFoto('anterior')" style="background-color: black; color: white; border: 1px solid white; padding:10px; border-radius: 10px">Anterior</button>
-                <button onclick="pasarFoto('siguiente')" style="background-color: black; color: white; border: 1px solid white; padding:10px; border-radius: 10px">Siguiente</button>
+            </section>  
+     
+            <div style="display:flex; justify-content:space-around;">
+                <img src="./imgs/arrow_inverse.png" alt="" style=" width:30px" onclick="pasarFoto('anterior')">
+                <img src="./imgs/arrow.png" alt="" style=" width:30px" onclick="pasarFoto('siguiente')">
+               
+               
             </div>
         </div>`;
 
 }
+
 
 function anaydirMultimedia() {
 
@@ -89,7 +95,7 @@ function anaydirMultimedia() {
     multi.innerHTML = `
         <img src="${videos[contador]}" alt="video" style="width:100%">`
 
-    interval = setInterval(() => pasarFoto('siguiente'), 3000);
+    interval = setInterval(() => pasarFoto('siguiente'), 5000);
 }
 
 function pasarFoto(accion) {
@@ -139,6 +145,14 @@ function anyadirInsta(id) {
         videosSent.classList.remove("isnot_shown");
         videosSent.classList.add("insta");
     }
+    if (id == 2) {
+        videosMent.classList.remove("isnot_shown");
+        videosMent.classList.add("insta");
+    }
+    if (id == 3) {
+        videosMuvim.classList.remove("isnot_shown");
+        videosMuvim.classList.add("insta");
+    }
 
 }
 
@@ -152,7 +166,7 @@ function menuMostrar2() {
 
     if (menu.classList.contains("active")) {
         main.classList.add("u-blur");
-     
+
     } else {
 
         main.classList.remove("u-blur");
