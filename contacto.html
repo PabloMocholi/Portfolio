@@ -33,44 +33,162 @@
         </section>
     </header>
     <main id="main">
-        <div style="padding: 20px; margin-top: 70px;">
-            <img src="./imgs/yo_vert.JPG" alt="" style="width: 100% ; border-radius: 10px;box-shadow: 0 0 10px #ccc;">
+        <div class="ContainerContacto">
+            <img src="./imgs/yo_vert.JPG" alt="Imagen Perfil" class="ContainerContacto-imagenPerfil">
 
-            <section style="display: flex; flex-wrap: wrap;justify-content: space-between;">
-                <div style="margin-top:10px; width: 300px;">
-                    <h3 style="margin: 0;">Nombre</h3>
-                    <span>Pablo Mocholí González</span>
+            <section class="ContainerContacto-datos">
+                <div class="ContainerContacto-datos-dato">
+                    <h3 class="u-margin0">Nombre</h3>
+                    <span class="u-marginLeft5">Pablo Mocholí González</span>
                 </div>
-                <div style="margin-top:10px;width: 300px;">
-                    <h3 style="margin: 0;">Edad</h3>
-                    <span>22 años</span>
+                <div class="ContainerContacto-datos-dato">
+                    <h3 class="u-margin0">Edad</h3>
+                    <span class="u-marginLeft5">22 años</span>
                 </div>
-                <div style="margin-top:10px;width: 300px;">
-                    <h3 style="margin: 0;">Correo</h3>
-                    <span>pablomocholi66@gmail.com</span>
+                <div class="ContainerContacto-datos-dato">
+                    <h3 class="u-margin0">Correo</h3>
+                    <span class="u-marginLeft5">pablomocholi66@gmail.com</span>
                 </div>
-                <div style="margin-top:10px;width: 300px;">
-                    <h3 style="margin: 0;">Teléfono</h3>
-                    <span>+34 633 30 55 87</span>
+                <div class="ContainerContacto-datos-dato">
+                    <h3 class="u-margin0">Teléfono</h3>
+                    <span class="u-marginLeft5">+34 633 30 55 87</span>
                 </div>
 
-                <div style="margin-top:10px">
-                    <h3 style="margin: 0;">Estudios</h3>
+                <div class="ContainerContacto-datos-dato--sinLimite">
+                    <div class="ContainerContacto-datos-dato-desplegable" onclick="cerrar('estudios')">
+                        <h3 class="u-margin0">Estudios</h3>
+                        <img src="./imgs/arrowdown.png" alt="flecha down"
+                            class="ContainerContacto-datos-dato-desplegable-icono">
+                    </div>
+                    <div id="datosEstudios" class="showI activeE">
+                        <div class="u-marginLeft5">
+                            <span>Graduado en Ingeniería Multimedia </span>
+                            <br>
+                            <span class="u-marginLeft5" style="font-size: 0.8em; font-weight: 100;">Universitat de València</span>
+                        </div>
+
+                        <div class="u-marginTop5 u-marginLeft5">
+                            <span>Máster Avanzado en Diseño y Desarrollo Web</span>
+                            <br><span class="u-marginLeft5" style="font-size: 0.8em; font-weight: 100;">CEI Escuela de Diseño y Marketing
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="ContainerContacto-datos-dato--sinLimite">
+                    <div class="ContainerContacto-datos-dato-desplegable" onclick="cerrar('trabajo')">
+                        <h3 class="u-margin0">Experiencia Laboral
+                        </h3>
+                        <img src="./imgs/arrowdown.png" alt="flecha down"
+                            class="ContainerContacto-datos-dato-desplegable-icono">
+                    </div>
+                    <div id="datosLaboral" class="showI activeL">
+                        <div class="u-marginLeft5">
+                            <span>Prácticas curriculares </span>
+                            <br>
+                            <div style="display: flex; flex-direction: column;">
+                                <span class="u-marginLeft5" style="font-size: 0.9em; font-weight: 100;"> Septiembre 2022 - Diciembre
+                                    2022</span>
+                                <span class="u-marginLeft5" style="font-size: 0.8em; font-weight: 100;">Universitat de València </span>
+                            </div>
+
+                        </div>
+
+                        <div class="u-marginTop5 u-marginLeft5">
+                            <span>Prácticas extracurriculares </span>
+                            <br>
+                            <div style="display: flex; flex-direction: column;">
+                                <span class="u-marginLeft5" style="font-size: 0.9em; font-weight: 100;"> Enero 2023 - Octubre
+                                    2023</span>
+                                <span class="u-marginLeft5" style="font-size: 0.8em; font-weight: 100;">Universitat de València </span>
+                            </div>
+
+                        </div>
+
+                        <div class="u-marginTop5 u-marginLeft5">
+                            <span>Investigador no Doctor </span>
+                            <br>
+                            <div style="display: flex; flex-direction: column;">
+                                <span class="u-marginLeft5" style="font-size: 0.9em; font-weight: 100;"> Diciembre 2023 - Actualidad</span>
+                                <span class="u-marginLeft5" style="font-size: 0.8em; font-weight: 100;">Universitat de València </span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="ContainerContacto-datos-dato--sinLimite">
+                    <div class="ContainerContacto-datos-dato-desplegable" onclick="cerrar('competencia')">
+                        <h3 class="u-margin0">Competencias
+                        </h3>
+                        <img src="./imgs/arrowdown.png" alt="flecha down"
+                            class="ContainerContacto-datos-dato-desplegable-icono">
+                    </div>
+                    <div id="datosCompetecia" class="showI activeC">
+                        <div class="u-marginLeft5">
+                            <span>Hard Skills </span>
+                            <br>
+                            <div style="display: flex; flex-direction: column;">
+                                <span class="u-marginLeft5" style="font-size: 0.9em; font-weight: 100;">Inglés - Level C1 </span>
+                                <span class="u-marginLeft5" style="font-size: 0.9em; font-weight: 100;">HTML, JS, CSS </span>
+                                <span class="u-marginLeft5" style="font-size: 0.9em; font-weight: 100;">MySQL </span>
+                                <span class="u-marginLeft5" style="font-size: 0.9em; font-weight: 100;">Python </span>
+                            
+                            
+                            
+                            </div>
+
+                        </div>
+
+                        <div class="u-marginTop5 u-marginLeft5">
+                            <span>Soft Skills </span>
+                            <br>
+                            <div style="display: flex; flex-direction: column;">
+                                <span class="u-marginLeft5" style="font-size: 0.9em; font-weight: 100;"> Trabajador en equipo </span>
+                                <span class="u-marginLeft5" style="font-size: 0.9em; font-weight: 100;"> Proactivo </span>
+                                <span class="u-marginLeft5" style="font-size: 0.9em; font-weight: 100;"> Creativo </span>
+                                <span class="u-marginLeft5" style="font-size: 0.9em; font-weight: 100;"> Resolutivo </span>
+                                <span class="u-marginLeft5" style="font-size: 0.9em; font-weight: 100;"> Capacidad de liderazgo </span>
+                                <span class="u-marginLeft5" style="font-size: 0.9em; font-weight: 100;"> Comunicación asertiva </span>
+                            </div>
+
+                        </div>
+
+                        
+                        
+                    </div>
+
+                </div>
+
+                <div class="ContainerContacto-datos-dato--sinLimite"
+                    style="margin-top: 30px; display: flex; flex-direction: column; align-items: center; gap: 10px;">
+
+                    <button
+                        style=" padding: 20px; border-radius: 10px; font-size: 1.2em; border: 1px solid white; background-color: black; color: white;">Contacta
+                        conmigo</button>
+                    <div style="display: flex; align-items: center; justify-content: space-around; width: 250px;">
+                        <div style="height: 2px ; width: 30px; background-color: white;"></div>
+                        <span>Búscame en RRSS</span>
+                        <div style="height: 2px ; width: 30px; background-color: white;"></div>
+                    </div>
                     <div>
-                        <span>Graduado en Ingeniería Multimedia </span>
-                        <br>
-                        <span style="font-size: 80%;">Universitat de València</span>
+                        <a target="_blank" href="https://www.instagram.com/pxblo_mocholi/"><img src="./imgs/instaIcon.webp"
+                                alt="instagram" style="width: 30px; height: 30px;"></a>
+                        <a target="_blank" href="https://www.linkedin.com/in/pablo-mochol%C3%AD-gonz%C3%A1lez-b07125245/"> <img
+                                src="./imgs/linkedinIcon.png" alt="instagram" style="width: 30px; height: 30px;"></a>
                     </div>
 
-                    <div style="margin-top: 10px;">
-                        <span>Máster Avanzado en Diseño y Desarrollo Web</span>
-                        <br><span style="font-size: 80%;">CEI Escuela de Diseño y Marketing </span>
-                    </div>
 
                 </div>
+
+
+
             </section>
 
-         
+
 
         </div>
 

@@ -195,6 +195,37 @@ body {
     border-radius: 10px;
 }
 
+/*
+*   Contacto 
+*/
+.ContainerContacto{
+    padding: 20px; margin-top: 70px;
+}
+
+.ContainerContacto-imagenPerfil{
+    width: 100% ; border-radius: 10px;
+}
+
+.ContainerContacto-datos{
+    display: flex; flex-wrap: wrap;justify-content: space-between; 
+}
+
+.ContainerContacto-datos-dato{
+    margin-top:10px; width: 300px;
+}
+
+.ContainerContacto-datos-dato--sinLimite{
+    margin-top:10px; width: 100%;
+}
+
+
+.ContainerContacto-datos-dato-desplegable{
+    display: flex; align-items: center; justify-content: space-between;
+}
+
+.ContainerContacto-datos-dato-desplegable-icono{
+    width: 20px; height:20px;
+}
 
 
 /*
@@ -217,6 +248,18 @@ body {
         1px 1px 2px #000, -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000;
 }
 
+.u-margin0{
+    margin: 0;  
+}
+
+.u-marginTop5{
+    margin-top: 5px;
+}
+
+.u-marginLeft5{
+    margin-left: 10px;
+} 
+
 /*visibilidad del menu*/
 .show {
     height: 0px;
@@ -229,11 +272,38 @@ body {
 
 }
 
+/*visibilidad de la info*/
+.showI {
+    height: 0px;
+    transition: height 0.6s;
+    overflow: hidden;
+    background-color: rgb(43, 42, 42);
+    padding-left: 10px;
+}
+
+.showI.activeE {
+    height: calc(48px * 2.6);
+
+
+}
+
+.showI.activeL {
+    height: calc(70px * 3);
+
+}
+.showI.activeC {
+    height: calc(100px * 2.7);
+
+}
+
+
+
 /*visibilidad general*/
 .isnot_shown {
 
     display: none;
 }
+
 
 /*filtros seleccionados*/
 .button_active {

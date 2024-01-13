@@ -10,10 +10,8 @@
     <style>
         #titIndex::after {
             content: '|';
-            /* Agrega un carácter de barra vertical al final del progreso para simular un cursor */
             display: inline-block;
             animation: parpadeo 1s infinite;
-            /* Añade una animación de parpadeo al cursor */
         }
 
         @keyframes parpadeo {
@@ -35,9 +33,9 @@
 
 <body class="BodyIndex">
     <div class=" u-centrar">
-        <h1 id="titIndex" class="TituloBienvenida"></h1><br>
-        <a href="home.html">
-            <span class="Explorar">Explora mi portfolio</span>
+        <h1 id="titIndex" class="TituloBienvenida" style="margin-bottom: 100px;"></h1><br>
+        <a href="home.html" >
+            <span class="Explorar" style="padding: 20px; border-radius: 10px; font-size: 1.2em; border: 1px solid white; background-color: black; color: white;">Explora mi portfolio</span>
         </a>
 
     </div>
@@ -46,7 +44,7 @@
 
     <script>
         var i = 0;
-        const txt = '¡Bienvenido soy Pablo! :)';
+        const txt = '¡Hola soy Pablo! :)';
         const velocidad = 300;
 
         window.onload = function () {
