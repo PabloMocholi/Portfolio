@@ -142,6 +142,7 @@ body {
     flex-wrap: wrap;
     gap: 2px;
     padding: 10px 5px 20px 5px;
+    overflow: auto;
 
 
 }
@@ -170,7 +171,7 @@ body {
 .Filtros {
     position: fixed;
     bottom: 0;
-    height: 35%;
+    height: 300px;
     width: 80%;
     background-color: black;
     border-radius: 10px;

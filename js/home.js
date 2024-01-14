@@ -162,6 +162,7 @@ function filtradoTags() {
     vectorActivos = [];
 
     let activos = document.querySelectorAll(".button_active");
+
     activos.forEach((a) => {
         vectorActivos.push(a.id);
     })
@@ -180,23 +181,31 @@ function comparativa(proyectos, seccion) {
 
     let encontrado = false;
 
+
     proyectos.forEach((p) => {
+
+        let cont = 0;
 
         encontrado = false;
         let tags = "";
 
-        p.etiquetas.forEach((e) => {
+        p.etiquetas.forEach((e,i) => {
 
             tags += `<span class="ChipsFiltro-chip ${e}">${e}</span>`
 
             for (i = 0; i < vectorActivos.length; i++) {
-                if (e == vectorActivos[i])
+                if (e == vectorActivos[i]){
                     encontrado = true;
+                    //console.log(e + " en " + p.id   + "  encontrado")
+                    cont++;
+                }
+                  
+                
             }
 
         })
 
-        if (encontrado)
+        if (cont == vectorActivos.length)
             nuevoHTML(seccion, p, tags);
     })
 
