@@ -1,0 +1,35 @@
+{
+"nombre":"Pablo Mocholí González",
+"edad":"22",
+"correo":"pablomocholi66@gmail.com",
+"telefono":"+34 633 30 55 87",
+"estudios":
+[
+    {
+        "estudio":"Graduado en Ingeniería Multimedia",
+        "institucion":"Universitat de València"
+    },{
+        "estudio":"Máster Avanzado en Diseño y Desarrollo Web",
+        "institucion":"CEI Escuela de Diseño y Marketing"
+    }
+],
+"experiencia":[
+    {
+        "trabajo":"Prácticas curriculares",
+        "tiempo":"Septiembre 2022 - Diciembre 2022",
+        "lugar": "Universitat de València"
+    },{
+        "trabajo":"Prácticas extracurriculares",
+        "tiempo":"Enero 2023 - Octubre 2023",
+        "lugar": "Universitat de València"
+    },{
+        "trabajo":"Investigador no Doctor",
+        "tiempo":"Diciembre 2023 - Actualidad",
+        "lugar": "Universitat de València"
+    }
+],
+"softskills":["Trabajador en equipo","Proactivo","Creativo", "Resolutivo","Capacidad de liderazgo","Comunicación asertiva"],
+"hardskills":["Inglés - Level C1","HTML, JS, CSS","MySQL","Python"]
+}
+    
+   

@@ -1,14 +1,187 @@
 const menu = document.getElementById("menu");
-const datosEstudios = document.getElementById("datosEstudios")
-const datosLaboral = document.getElementById("datosLaboral")
-const datosCompetencia = document.getElementById("datosCompetecia");
+let datosEstudios;
+let datosLaboral;
+let datosCompetencia;
+const sectionPrincipal = document.getElementById("sectionPrincipal");
+const formContacto = document.getElementById("formContacto");
+
+var url = "./db/profile.json";
+
+// Uso de la función fetch
+fetch(url)
+    .then(function (response) {
+        if (!response.ok) {
+            throw new Error("La solicitud no fue exitosa: " + response.status);
+        }
+        return response.json();
+    })
+    .then(function (data) {
+        console.log(data);
+        anaydirDatos(data);
+        setVariables();
+    
+    })
+
+
+function anaydirDatos(objeto) {
+
+    let stringEstudios = "";
+    let stringTrabajo = "";
+    let hardSkills = "";
+    let softSkills = "";
+
+    objeto.estudios.forEach(e => {
+
+        stringEstudios+= `<div class="u-marginLeft5">
+        <span>${e.estudio}</span>
+        <br>
+        <span
+            class="u-marginLeft5 ContainerContacto-datos-dato-subTit ContainerContacto-datos-dato-subTit--small">${e.institucion}</span>
+    </div>`
+        
+    });
+
+    objeto.experiencia.forEach(t => {
+
+        stringTrabajo+= ` <div class="u-marginTop5 u-marginLeft5">
+        <span>${t.trabajo} </span>
+        <br>
+        <div style="display: flex; flex-direction: column;">
+            <span class="u-marginLeft5 ContainerContacto-datos-dato-subTit">${t.tiempo} </span>
+            <span
+                class="u-marginLeft5 ContainerContacto-datos-dato-subTit ContainerContacto-datos-dato-subTit--small">${t.lugar} </span>
+        </div>
+
+    </div>`
+        
+    });
+
+    objeto.softskills.forEach(s => {
+
+        softSkills+= `  <span class="u-marginLeft5 ContainerContacto-datos-dato-subTit"> ${s}
+        </span>`
+        
+    });
+
+    objeto.hardskills.forEach(s => {
+
+        hardSkills+= `  <span class="u-marginLeft5 ContainerContacto-datos-dato-subTit"> ${s}
+        </span>`
+        
+    });
+
+    sectionPrincipal.innerHTML += `
+    <div class="ContainerContacto-datos-dato">
+        <h3 class="u-margin0">Nombre</h3>
+        <span class="u-marginLeft5">${objeto.nombre}</span>
+    </div>
+    <div class="ContainerContacto-datos-dato">
+        <h3 class="u-margin0">Edad</h3>
+        <span class="u-marginLeft5">${objeto.edad} años</span>
+    </div>
+    <div class="ContainerContacto-datos-dato">
+        <h3 class="u-margin0">Correo</h3>
+        <span class="u-marginLeft5">${objeto.correo}</span>
+    </div>
+    <div class="ContainerContacto-datos-dato">
+        <h3 class="u-margin0">Teléfono</h3>
+        <span class="u-marginLeft5">${objeto.telefono}</span>
+    </div>
+    <div class="ContainerContacto-datos-dato--sinLimite">
+        <div class="ContainerContacto-datos-dato-desplegable" onclick="cerrar('estudios')">
+            <h3 class="u-margin0">Estudios</h3>
+            <img src="./imgs/arrowdown.png" alt="flecha down"
+                class="ContainerContacto-datos-dato-desplegable-icono">
+        </div>
+        <div id="datosEstudios" class="showI activeE">
+            ${stringEstudios}
+
+        </div>
+    </div>
+
+    <div class="ContainerContacto-datos-dato--sinLimite">
+        <div class="ContainerContacto-datos-dato-desplegable" onclick="cerrar('trabajo')">
+            <h3 class="u-margin0">Experiencia Laboral
+            </h3>
+            <img src="./imgs/arrowdown.png" alt="flecha down"
+                class="ContainerContacto-datos-dato-desplegable-icono">
+        </div>
+        <div id="datosLaboral" class="showI activeL">
+        ${stringTrabajo}
+        </div>
+    </div>
+
+    <div class="ContainerContacto-datos-dato--sinLimite">
+    <div class="ContainerContacto-datos-dato-desplegable" onclick="cerrar('competencia')">
+        <h3 class="u-margin0">Competencias
+        </h3>
+        <img src="./imgs/arrowdown.png" alt="flecha down"
+            class="ContainerContacto-datos-dato-desplegable-icono">
+    </div>
+    <div id="datosCompetecia" class="showI activeC">
+        <div class="u-marginLeft5 u-marginTop5">
+            <span>Hard Skills </span>
+            <br>
+            <div class="u-flexColumn">
+                ${hardSkills}
+            </div>
+        </div>
+
+        <div class="u-marginTop5 u-marginLeft5">
+            <span>Soft Skills </span>
+            <br>
+            <div class="u-flexColumn">
+                ${softSkills}
+            </div>
+
+        </div>
+    </div>
+    <div class="ContainerContacto-datos-contacto">
+
+        <button onclick="abrecierraForm()" class="ContainerContacto-datos-contacto-boton">Contacta conmigo</button>
+        <div class="ContainerContacto-datos-contacto-buscar">
+            <div class="ContainerContacto-datos-contacto-buscar-linea"></div>
+            <span>Búscame en RRSS</span>
+            <div class="ContainerContacto-datos-contacto-buscar-linea"></div>
+        </div>
+        <div>
+            <a target="_blank" href="https://www.instagram.com/pxblo_mocholi/"><img
+                    src="./imgs/instaIcon.webp" alt="instagram" class="ContainerContacto-datos-contacto-icon"></a>
+            <a target="_blank"
+                href="https://www.linkedin.com/in/pablo-mochol%C3%AD-gonz%C3%A1lez-b07125245/"> <img
+                    src="./imgs/linkedinIcon.png" alt="instagram" class="ContainerContacto-datos-contacto-icon"></a>
+        </div>
+
+
+    </div>
+
+
+    
+    `
+}
+
+function abrecierraForm(){
+
+    formContacto.classList.toggle("isnot_shown");
+    sectionPrincipal.classList.toggle("isnot_shown");
+
+}
+
+function setVariables(){
+    datosEstudios = document.getElementById("datosEstudios")
+    datosLaboral = document.getElementById("datosLaboral")
+    datosCompetencia = document.getElementById("datosCompetecia");
+  
+}
+
+
 
 function menuMostrar2() {
     menu.classList.toggle("active");
 
     if (menu.classList.contains("active")) {
         main.classList.add("u-blur");
-     
+
     } else {
 
         main.classList.remove("u-blur");
@@ -18,14 +191,14 @@ function menuMostrar2() {
 }
 
 
-function cerrar(seccion){
+function cerrar(seccion) {
 
-    if(seccion == "estudios"){
+    if (seccion == "estudios") {
         datosEstudios.classList.toggle("activeE");
-    }else if(seccion == "trabajo"){
+    } else if (seccion == "trabajo") {
         datosLaboral.classList.toggle("activeL");
     }
-    else if(seccion == "competencia"){
+    else if (seccion == "competencia") {
         datosCompetencia.classList.toggle("activeC");
     }
 }

@@ -142,7 +142,7 @@ body {
     flex-wrap: wrap;
     gap: 2px;
     padding: 10px 5px 20px 5px;
- 
+
 
 }
 
@@ -198,33 +198,143 @@ body {
 /*
 *   Contacto 
 */
-.ContainerContacto{
-    padding: 20px; margin-top: 70px;
+.ContainerContacto {
+    padding: 20px;
+    margin-top: 70px;
 }
 
-.ContainerContacto-imagenPerfil{
-    width: 100% ; border-radius: 10px;
+.ContainerContacto-imagenPerfil {
+    width: 100%;
+    border-radius: 10px;
 }
 
-.ContainerContacto-datos{
-    display: flex; flex-wrap: wrap;justify-content: space-between; 
+.ContainerContacto-datos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.ContainerContacto-datos-dato{
-    margin-top:10px; width: 300px;
+.ContainerContacto-datos-dato {
+    margin-top: 10px;
+    width: 300px;
 }
 
-.ContainerContacto-datos-dato--sinLimite{
-    margin-top:10px; width: 100%;
+.ContainerContacto-datos-dato-subTit {
+    font-size: 0.9em;
+    font-weight: 100;
+}
+
+.ContainerContacto-datos-dato-subTit--small {
+    font-size: 0.8em;
 }
 
 
-.ContainerContacto-datos-dato-desplegable{
-    display: flex; align-items: center; justify-content: space-between;
+.ContainerContacto-datos-dato--sinLimite {
+    margin-top: 10px;
+    width: 100%;
 }
 
-.ContainerContacto-datos-dato-desplegable-icono{
-    width: 20px; height:20px;
+.ContainerContacto-datos-dato-desplegable {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ContainerContacto-datos-dato-desplegable-icono {
+    width: 20px;
+    height: 20px;
+}
+
+.ContainerContacto-datos-contacto {
+    margin-top: 10px;
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.ContainerContacto-datos-contacto-boton{
+    padding: 20px; border-radius: 10px; font-size: 1.2em; border: 1px solid white; background-color: black; color: white;
+}
+
+.ContainerContacto-datos-contacto-buscar{
+    display: flex; align-items: center; justify-content: space-around; width: 250px;
+}
+.ContainerContacto-datos-contacto-buscar-linea{
+    height: 2px ; width: 30px; background-color: white;
+}
+.ContainerContacto-datos-contacto-icon{
+    width: 30px; height: 30px;
+}
+
+.FormularioContacto{
+    width: 95%;
+    height: 100%;
+
+    background-color: black;
+    font-size: 1.2em;
+    overflow: auto;
+    z-index: 1;
+}
+
+.FormularioContacto-entradas{
+    
+    padding: 2rem;
+    width: 75%;
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+    font-size: 1em;
+    margin: 0.8em
+
+}
+
+.FormularioContacto-entradas--nombre{
+    
+    padding: 2rem;
+    width: 90%;
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+    font-size: 1em;
+    margin: 0.8em
+
+}
+
+label{
+    margin: 0.8em
+}
+.FormularioContacto-entradaTexto{
+    
+
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+    font-size: 1.3em;
+    padding: 1rem;
+    margin: 0.8em
+  
+
+}
+
+.FormularioContacto-boton{
+    
+
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+    font-size: 1.3em;
+    padding: 1rem;
+    margin: 0.8em
+  
+
+}
+
+.FormularioContacto-entradas::placeholder{
+    color: white;
+
 }
 
 
@@ -248,17 +358,21 @@ body {
         1px 1px 2px #000, -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000;
 }
 
-.u-margin0{
-    margin: 0;  
+.u-margin0 {
+    margin: 0;
 }
 
-.u-marginTop5{
+.u-marginTop5 {
     margin-top: 5px;
 }
 
-.u-marginLeft5{
+.u-marginLeft5 {
     margin-left: 10px;
-} 
+}
+
+.u-flexColumn{
+    display: flex; flex-direction: column;
+}
 
 /*visibilidad del menu*/
 .show {
@@ -288,11 +402,12 @@ body {
 }
 
 .showI.activeL {
-    height: calc(70px * 3);
+    height: calc(70px * 3.1);
 
 }
+
 .showI.activeC {
-    height: calc(100px * 2.7);
+    height: calc(100px * 2.8);
 
 }
 
@@ -330,7 +445,7 @@ body {
 .insta {
     padding: 20px;
     display: flex;
-    gap:10px;
+    gap: 10px;
     overflow: auto;
 
 }
