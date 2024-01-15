@@ -151,6 +151,7 @@ body {
 
     padding: 10px;
     gap: 5px;
+    
 
 }
 
@@ -185,6 +186,17 @@ body {
     text-align: center;
     padding: 10px;
     width: 100%;
+}
+
+.Filtros-tit--search {
+    width: 20%;
+    border:1px solid white;
+    display: block;
+    margin: auto;
+    padding: 20px;
+    margin-top: 20px;
+ 
+
 }
 
 
@@ -450,3 +462,40 @@ label{
     overflow: auto;
 
 }
+
+/*Objetos pequeños*/
+
+@media( max-width: 400px){
+
+    .Filtros {
+        
+        height: 350px;
+      
+    }
+
+}
+
+@media( min-width: 800px){
+
+    .ContenedorProyectos {
+     
+        flex-direction: row;
+    }
+
+    #FallaSection{
+        width: 50%;
+    }
+
+    #CeiSection{
+        width: 50%;
+    }
+
+    .showFiltro{
+        transform: translate(61%, -50%);
+    }
+
+}
+
+
+
+

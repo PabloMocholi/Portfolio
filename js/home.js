@@ -225,7 +225,7 @@ function nuevoHTML(seccion, p, tags) {
     
             <img class="ContenedorProyectos-proyecto-imagen" src=" ${p.imagen}" alt="${p.nombre}">
         </div>
-
+</a>
     <div class="ChipsFiltro">
     ${tags}
     </div>
