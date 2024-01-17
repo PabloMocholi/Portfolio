@@ -88,6 +88,7 @@ function anaydirMultimedia() {
 
    
 
+    
     const multi = document.getElementById("multimedia");
 
     proyectoElegido.multimedia.forEach((m) => {
