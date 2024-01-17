@@ -145,12 +145,14 @@ body {
     overflow: auto;
 
 
+
 }
 
 .ChipsFiltro--filtrado {
 
     padding: 10px;
     gap: 5px;
+    justify-content: space-around;
     
 
 }
@@ -378,6 +380,11 @@ label{
 .u-marginTop5 {
     margin-top: 5px;
 }
+
+.u-marginBottom5 {
+    margin-bottom: 20px;
+}
+
 
 .u-marginLeft5 {
     margin-left: 10px;

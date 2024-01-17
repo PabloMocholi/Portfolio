@@ -214,7 +214,7 @@ function comparativa(proyectos, seccion) {
 
 function nuevoHTML(seccion, p, tags) {
 
-    seccion.innerHTML += `<article>
+    seccion.innerHTML += `<article class="u-marginBottom5">
     <a href="proyecto.html?id=${p.id}" style="text-decoration:none">
         <div class="ContenedorProyectos-proyecto">
     

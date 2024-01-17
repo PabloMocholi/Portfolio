@@ -26,7 +26,7 @@ fetch(url)
     })
     .then(function (data) {
         proyectoElegido = data.find((p) => p.id == Number(identificador));
-        console.log(proyectoElegido.multimedia)
+
 
         rellenar();
         anaydirMultimedia();
@@ -86,35 +86,35 @@ function rellenar() {
 
 function anaydirMultimedia() {
 
+   
+
     const multi = document.getElementById("multimedia");
 
     proyectoElegido.multimedia.forEach((m) => {
         videos.push(m);
     })
 
+    console.log(videos)
+
     multi.innerHTML = `
-        <img src="${videos[contador]}" alt="video" style="width:100%">`
+        <img id="multiIMG" src="${videos[contador]}" alt="video" style="width:100%">`
 
     interval = setInterval(() => pasarFoto('siguiente'), 5000);
 }
 
 function pasarFoto(accion) {
-    console.log("boton")
-
+  
+    const imagen = document.getElementById("multiIMG");
     if (accion == "siguiente") {
 
         contador++
 
         if (contador < videos.length) {
-            multimedia.innerHTML = `
-                <img src="${videos[contador]}" alt="video" style="width:100%;">
-                <div style="display:flex; justify-content:space-around"> `
+            imagen.src = videos[contador];
+
         } else {
             contador = 0;
-            multimedia.innerHTML = `
-                <img src="${videos[contador]}" alt="video" style="width:100%">
-                <div style="display:flex; justify-content:space-around">
-            `
+            imagen.src = videos[contador];
 
         }
 
@@ -123,19 +123,16 @@ function pasarFoto(accion) {
         contador--
 
         if (contador >= 0) {
-            multimedia.innerHTML = `
-                <img src="${videos[contador]}" alt="video" style="width:100%;">
-                <div style="display:flex; justify-content:space-around"> `
+            imagen.src = videos[contador];
         } else {
             contador = videos.length - 1;
-            multimedia.innerHTML = `
-                <img src="${videos[contador]}" alt="video" style="width:100%">
-                <div style="display:flex; justify-content:space-around">
-                `
-
+            imagen.src = videos[contador];
         }
 
     }
+
+     clearInterval(interval);
+     interval = setInterval(() => pasarFoto('siguiente'), 5000);
 
 }
 

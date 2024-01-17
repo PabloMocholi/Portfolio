@@ -36,7 +36,7 @@
         "imagen": "./imgs/chefconnect.png",
         "etiquetas": ["HTML","CSS"],
         "descripcion":"El primer proyecto que desarrollamos en el máster recibió el nombre de <i>ChefConnect</i>. El objetivo era diseñar el aspecto visual de una nueva red social basada en la cocina. <br><br> Para conseguirlo se desarrollaron una seria de páginas independientes: una <i>landing page</i>, un <i>home</i>, un apartado de desafíos de la comunidad y una página de perfil de usuario.<br><br> <b>NOTA:</b> Para el desarrollo de todos los proyectos del CEI presentes en este portfolio solo disponíamos del tiempo proporcionado en las clasesº"
-        ,"detalles":["Diseño de elementos gráficos","Diseño responsive","Navegación entre páginas","HTML y CSS"]
+        ,"detalles":["Diseño de elementos gráficos","Diseño responsive","Navegación entre páginas"]
         ,"multimedia":["./imgs/chef1.png","./imgs/chef2.png","./imgs/chef3.png","./imgs/chef4.png","./imgs/chef5.png"]
     },
     {
@@ -45,8 +45,8 @@
         "nombre": "Nexus",
         "imagen": "./imgs/nexus.png",
         "etiquetas": ["HTML","CSS", "JavaScript"],
-        "descripcion":""
-        ,"detalles":["Creación de elementos desde JavaScript","Desarrollo de una consola que muestra las tareas creadas desde el formulario","Lectura de datos en el form","Implementación de varios bloques de contenido que alternan su visibilidad según apartado seleccionado","HTML, CSS y JavaScript"]
+        "descripcion":"Este proyecto se basaba en el desarrollo de un SaaS de gestión de tareas. Debíamos oferecer una interfaz donde se listaran por partes separadas las tareas completadas y pendientes de hacer junto a sus respectivos responsables.<br><br>Esta plataforma debía permitir añadir nuevas tareas, para ello se utiliza un formulario donde se recogen los datos introducidos por el usuario y dichos datos se usan para la creación de contenido desde código "
+        ,"detalles":["Creación de elementos desde JavaScript","Desarrollo de una consola que muestra las tareas creadas desde el formulario","Manejo de datos desde JavaScript","Implementación de varios bloques de contenido que alternan su visibilidad según apartado seleccionado"]
         ,"multimedia":["./imgs/sas1.png","./imgs/sas2.png","./imgs/sas3.png"]
     },
     {
@@ -56,6 +56,7 @@
         "imagen": "./imgs/airitmo.png",
         "etiquetas": ["HTML","CSS","JavaScript"],
         "descripcion":""
-        ,"detalles":["","","",""]
+        ,"detalles":["Diseño mobile first","Animaciones y transiciones","Menús desplegables","Uso de fetch para la lectura de datos desde .json"]
+        ,"multimedia":["./imgs/ai1.png","./imgs/ai2.png","./imgs/ai3.png","./imgs/ai4.png","./imgs/ai5.png"]
     }
 ]
