@@ -16,7 +16,8 @@
     <header class="HeaderPrincipal" id="header">
         <nav class="HeaderPrincipal-nav">
 
-            <span class="HeaderPrincipal-nav-name u-bordeTexto">pxblo</span>
+            <a href="home.html" class="u-notDecorar"><span class="HeaderPrincipal-nav-name u-bordeTexto">pxblo</span></a>
+
             <img class="HeaderPrincipal-nav-menu" src="./imgs/menuwhite.png" alt="menu" onclick="menuMostrar2()">
 
         </nav>
@@ -50,11 +51,11 @@
        </div> 
 
         <div style="display: flex; flex-wrap: wrap;">
-            <div >
+            <div class="FormularioContacto-nombre" >
                 <label for="nombre">Nombre</label><br>
                 <input class="FormularioContacto-entradas--nombre" type="text" id="nombre" name="nombre" placeholder="Nombre"><br>
             </div>
-            <div >
+            <div class="FormularioContacto-nombre" >
                 <label for="apellido">Apellido</label><br>
                 <input  class="FormularioContacto-entradas--nombre" type="text" id="apellido" name="apellido" placeholder="Apellidos"><br>
             </div>
@@ -71,10 +72,10 @@
         <label for="asunto">Asunto</label><br>
         <input class="FormularioContacto-entradas" type="text" id="asunto" name="asunto" placeholder="Asunto"><br><br>
         
-        <label for="mensaje">Mensaje</label>
+        <label for="mensaje">Mensaje</label><br>
         <textarea class="FormularioContacto-entradaTexto" name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
-        
-        <input class="FormularioContacto-boton" type="submit" value="Submit">
+        <br><br>
+        <input class="FormularioContacto-boton" type="submit" value="Enviar">
 
     </form>
  

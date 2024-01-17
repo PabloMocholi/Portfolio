@@ -6,6 +6,7 @@ const header = document.getElementById("header");
 const main = document.getElementById("main");
 const filtrado = document.getElementById("filtrado");
 const filtros = document.getElementById("filtros");
+const laflecha = document.querySelector(".Filtros-tit-flecha")
 
 let menuActivo = false;
 let filtrosActivo = false;
@@ -16,6 +17,8 @@ let proyectosFalla = [];
 let proyectosCEI = [];
 let etiquetas = [];
 let vectorActivos = [];
+
+var dirFleca = 0;
 
 var url = "./db/proyectos.json";
 
@@ -74,36 +77,46 @@ function menuMostrar() {
     if (menu.classList.contains("active")) {
         main.classList.add("u-blur");
         menuActivo = true;
-    } else{
+    } else {
 
-       if(!filtrosActivo){
-        main.classList.remove("u-blur");
-       } 
-       menuActivo = false;
+        if (!filtrosActivo) {
+            main.classList.remove("u-blur");
+        }
+        menuActivo = false;
     }
 
     console.log("menu", menuActivo)
-        
+
 }
 
 function filtroMostrar() {
     filtros.classList.toggle("active");
+
+    if ( dirFleca == 0){
+        laflecha.src = "imgs/arrowleft.jpg"
+        dirFleca++
+    }
+    else{
+        laflecha.src = "imgs/arrowright.jpg"
+        dirFleca = 0;
+    }
+       
 
     if (filtros.classList.contains("active")) {
 
         main.classList.add("u-blur");
         filtrosActivo = true;
     }
-    else{
+    else {
 
-        if(!menuActivo){
+        if (!menuActivo) {
             main.classList.remove("u-blur");
         }
         filtrosActivo = false;
     }
 
-    console.log("filtro",filtrosActivo)
-  
+   // console.log("filtro", filtrosActivo)
+
 }
 
 function getEtiquetasTotales(json) {
@@ -189,18 +202,18 @@ function comparativa(proyectos, seccion) {
         encontrado = false;
         let tags = "";
 
-        p.etiquetas.forEach((e,i) => {
+        p.etiquetas.forEach((e, i) => {
 
             tags += `<span class="ChipsFiltro-chip ${e}">${e}</span>`
 
             for (i = 0; i < vectorActivos.length; i++) {
-                if (e == vectorActivos[i]){
+                if (e == vectorActivos[i]) {
                     encontrado = true;
                     //console.log(e + " en " + p.id   + "  encontrado")
                     cont++;
                 }
-                  
-                
+
+
             }
 
         })

@@ -27,7 +27,7 @@ body {
     width: 100%;
     color: white;
     z-index: 1;
-    height: 70px;
+    height: 85px;
     background-color: black;
 
 }
@@ -42,6 +42,7 @@ body {
 .HeaderPrincipal-nav-name {
     font-weight: 700;
     font-size: 1.5em;
+  
 }
 
 .HeaderPrincipal-nav-menu {
@@ -57,19 +58,45 @@ body {
 
 .HeaderPrincipal-sections-lista {
     list-style-type: none;
-    margin: 0;
-    padding-top: 10px;
+    margin: 5px;
+
 }
 
 
 .HeaderPrincipal-sections-lista-link {
     text-decoration: none;
     color: white;
+    font-size: 1.1em;
+   display: block;
+   padding: 5px;
+
+
 }
 
 /*
 *   index.html
 */
+
+#titIndex::after {
+    content: '|';
+    display: inline-block;
+    animation: parpadeo 1s infinite;
+}
+
+@keyframes parpadeo {
+
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 
 .BodyIndex {
 
@@ -77,17 +104,31 @@ body {
     background-color: black;
 }
 
-.TituloBienvenida {
+.BodyIndex-tituloBienvenida {
 
     color: white;
-    font-weight: 200;
-    font-size: 400%;
     margin: 0;
+    width: 300px;
+    font-weight: 100;
+    font-size: 3em;
 
 }
 
-.Explorar {
+.BodyIndex-explorar {
+    position: fixed;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 30px;
+    text-decoration: none;
+}
+
+.BodyIndex-explorar-texto {
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 2.5em;
     color: white;
+    font-weight: 600;
 }
 
 .BodyIndex-nombres {
@@ -397,6 +438,19 @@ label {
     transform: translate(-50%, -50%);
 }
 
+.u-posTop {
+    position: fixed;
+    left: 50%;
+    top: -10%;
+    transform: translate(-50%, -50%);
+    transition: top 0.5s;
+}
+.u-posTop.active {
+   
+    top: 10%;
+
+}
+
 .u-blur {
     filter: blur(2px);
 }
@@ -433,6 +487,15 @@ label {
     flex-direction: column;
 }
 
+.u-notDecorar{
+    text-decoration: none;
+    color: white
+}
+
+.u-paddingTop5{
+    padding-top: 5px;
+}
+
 /*visibilidad del menu*/
 .show {
     height: 0px;
@@ -441,7 +504,7 @@ label {
 }
 
 .show.active {
-    height: 100%;
+    height: 110%;
 
 }
 
@@ -549,12 +612,14 @@ label {
 
     .ContainerContacto-imagenPerfil {
         width: 60%;
+        margin-bottom: 40px;
 
     }
 
     .ContainerContacto-datos {
 
         font-size: 1.4em;
+        padding: 40px;
 
     }
 
@@ -581,25 +646,33 @@ label {
 
     /**/
     .HeaderPrincipal-nav-name {
-        font-size: 3.5em;
+        font-size: 2.5em;
     }
 
     .HeaderPrincipal-nav-menu {
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
     }
 
     .HeaderPrincipal-nav {
         background-color: black;
     }
 
-    .show.active {
-        height: 140px;
-    }
+   
 
     .HeaderPrincipal-sections-lista {
-        font-size: 2em;
+        font-size: 1.2em;
     }
+
+    .FormularioContacto-entradas {
+        width: 80%;
+
+    }
+
+    .FormularioContacto-entradaTexto {
+        width: 84%;
+    }
+
 }
 
 @media(min-width: 1200px) {
@@ -615,7 +688,7 @@ label {
 
 
     .ChipsFiltro {
-        font-size: 2.5em;
+        font-size: 1.5em;
     }
 
     .ContenedorProyectos-proyecto-fondo {
@@ -627,9 +700,9 @@ label {
 
     .Filtros-tit-flecha {
 
-        width: 60px;
-        height: 80px;
-        left: -62px;
+        width: 40px;
+        height: 60px;
+        left: -42px;
 
     }
 
@@ -644,18 +717,18 @@ label {
     /*CONTACTO*/
 
     .showI.activeE {
-        height: calc(48px * 4.1);
+        height: calc(48px * 3.1);
 
 
     }
 
     .showI.activeL {
-        height: calc(70px * 5.9);
+        height: calc(70px * 4.3);
 
     }
 
     .showI.activeC {
-        height: calc(100px * 5.5);
+        height: calc(100px * 4);
 
     }
 
@@ -667,22 +740,39 @@ label {
     }
 
     .ContainerContacto-datos {
-        padding: 40px;
+
         overflow: auto;
         height: 73vh;
     }
 
     .ContainerContacto-imagenPerfil {
         margin-top: 40px;
-        width: 60%;
+        width: 55%;
 
     }
 
-   
+
     .ContainerContacto-datos-dato {
         margin-top: 10px;
         width: 50%;
-      }
+    }
+
+    .FormularioContacto {
+        width: 100%;
+    }
+
+    .FormularioContacto-entradas {
+        width: 92%;
+
+    }
+
+    .FormularioContacto-nombre {
+        width: 48%;
+    }
+
+    .FormularioContacto-entradaTexto {
+        width: 94%;
+    }
 
 
 }

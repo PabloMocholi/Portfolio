@@ -93,7 +93,7 @@ function anaydirDatos(objeto) {
             <img src="./imgs/arrowdown.png" alt="flecha down"
                 class="ContainerContacto-datos-dato-desplegable-icono">
         </div>
-        <div id="datosEstudios" class="showI activeE">
+        <div id="datosEstudios" class="showI activeE u-paddingTop5">
             ${stringEstudios}
 
         </div>
@@ -106,7 +106,7 @@ function anaydirDatos(objeto) {
             <img src="./imgs/arrowdown.png" alt="flecha down"
                 class="ContainerContacto-datos-dato-desplegable-icono">
         </div>
-        <div id="datosLaboral" class="showI activeL">
+        <div id="datosLaboral" class="showI activeL u-paddingTop5">
         ${stringTrabajo}
         </div>
     </div>
@@ -118,7 +118,7 @@ function anaydirDatos(objeto) {
         <img src="./imgs/arrowdown.png" alt="flecha down"
             class="ContainerContacto-datos-dato-desplegable-icono">
     </div>
-    <div id="datosCompetecia" class="showI activeC">
+    <div id="datosCompetecia" class="showI activeC u-paddingTop5">
         <div class="u-marginLeft5 u-marginTop5">
             <span>Hard Skills </span>
             <br>

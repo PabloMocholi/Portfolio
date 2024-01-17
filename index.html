@@ -8,57 +8,43 @@
 
     <title>Welcome</title>
     <style>
-        #titIndex::after {
-            content: '|';
-            display: inline-block;
-            animation: parpadeo 1s infinite;
-        }
-
-        @keyframes parpadeo {
-
-            0% {
-                opacity: 1;
-            }
-
-            50% {
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
+      
     </style>
 </head>
 
 <body class="BodyIndex">
     <div class="BodyIndex-nombres">
-        <span  class="BodyIndex-nombres-nombre u-bordeTexto--white ">pxblo</span>
-        <span  class="BodyIndex-nombres-nombre u-bordeTexto--white ">pxblo</span>
-        <span  class="BodyIndex-nombres-nombre u-bordeTexto--white ">pxblo</span>
-        <span  class="BodyIndex-nombres-nombre u-bordeTexto--white ">pxblo</span>
-        <span  class="BodyIndex-nombres-nombre u-bordeTexto--white ">pxblo</span>
-        <span  class="BodyIndex-nombres-nombre u-bordeTexto--white ">pxblo</span>
-        <span  class="BodyIndex-nombres-nombre u-bordeTexto--white ">pxblo</span>
-        <span  class="BodyIndex-nombres-nombre u-bordeTexto--white ">pxblo</span>
+        <span class="BodyIndex-nombres-nombre u-bordeTexto--white ">pxblo</span>
+        <span class="BodyIndex-nombres-nombre u-bordeTexto--white ">pxblo</span>
+        <span class="BodyIndex-nombres-nombre u-bordeTexto--white ">pxblo</span>
+        <span class="BodyIndex-nombres-nombre u-bordeTexto--white ">pxblo</span>
+        <span class="BodyIndex-nombres-nombre u-bordeTexto--white ">pxblo</span>
+        <span class="BodyIndex-nombres-nombre u-bordeTexto--white ">pxblo</span>
+        <span class="BodyIndex-nombres-nombre u-bordeTexto--white ">pxblo</span>
+        <span class="BodyIndex-nombres-nombre u-bordeTexto--white ">pxblo</span>
     </div>
 
 
 
     <div class=" u-centrar">
 
-        <h1 id="titIndex" class="TituloBienvenida" style=" width: 300px;font-weight: 100;font-size: 3em;"></h1><br>
+        <h1 id="titIndex" class="BodyIndex-tituloBienvenida"></h1><br>
 
 
     </div>
 
-    <a href="home.html" style=" position: fixed;
-    left: 50%;
-    bottom: 50%;
-    transform: translate(-50%, -50%); bottom: 30px; text-decoration: none;">
-        <span class="Explorar"
-            style=" padding: 20px; border-radius: 10px; font-size: 2.5em; color: white;font-weight: 600;">EXPLORAR</span>
+    <a href="home.html" class="BodyIndex-explorar" >
+        <span class="BodyIndex-explorar-texto">EXPLORAR</span>
+       
     </a>
+
+    <div id="alert" style="display: flex; align-items: center;" class="u-posTop">
+        <img src="./imgs/warning.png" alt="cuidao" style="width: 40px; height: 40px;">
+        <span> Traducir la página alterará la animación</span>
+    </div>
+      
+
+    
 
 
     <p id="demo"></p>
@@ -67,6 +53,7 @@
         var i = 0;
         const txt = 'Bienvenido a mi portfolio :)';
         const velocidad = 250;
+        const alerta = document.getElementById("alert");
 
         window.onload = function () {
             maquinaEscribir();
@@ -85,6 +72,18 @@
                     setTimeout(maquinaEscribir, 1000);
                 }, 1000);
             }
+
+
+        }
+
+        
+        setTimeout(bajar, 100);
+        setTimeout(bajar, 4000);
+
+        function bajar(){
+
+            alerta.classList.toggle("active");
+
 
 
         }
