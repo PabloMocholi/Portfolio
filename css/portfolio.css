@@ -90,6 +90,21 @@ body {
     color: white;
 }
 
+.BodyIndex-nombres {
+    height: 98%;
+    overflow: hidden;
+}
+
+.BodyIndex-nombres-nombre {
+    opacity: 0.2;
+    font-size: 10em;
+    color: black;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+
 /*
 *  Home
 */
@@ -153,7 +168,7 @@ body {
     padding: 10px;
     gap: 5px;
     justify-content: space-around;
-    
+
 
 }
 
@@ -190,14 +205,24 @@ body {
     width: 100%;
 }
 
+.Filtros-tit-flecha {
+    border: 1px solid black;
+    border-radius: 10px 0px 0px 10px;
+    position: absolute;
+    width: 25px;
+    height: 50px;
+    left: -27px;
+    top: 40%
+}
+
 .Filtros-tit--search {
     width: 20%;
-    border:1px solid white;
+    border: 1px solid white;
     display: block;
     margin: auto;
     padding: 20px;
     margin-top: 20px;
- 
+
 
 }
 
@@ -270,21 +295,34 @@ body {
     gap: 10px;
 }
 
-.ContainerContacto-datos-contacto-boton{
-    padding: 20px; border-radius: 10px; font-size: 1.2em; border: 1px solid white; background-color: black; color: white;
+.ContainerContacto-datos-contacto-boton {
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1.2em;
+    border: 1px solid white;
+    background-color: black;
+    color: white;
 }
 
-.ContainerContacto-datos-contacto-buscar{
-    display: flex; align-items: center; justify-content: space-around; width: 250px;
-}
-.ContainerContacto-datos-contacto-buscar-linea{
-    height: 2px ; width: 30px; background-color: white;
-}
-.ContainerContacto-datos-contacto-icon{
-    width: 30px; height: 30px;
+.ContainerContacto-datos-contacto-buscar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 250px;
 }
 
-.FormularioContacto{
+.ContainerContacto-datos-contacto-buscar-linea {
+    height: 2px;
+    width: 30px;
+    background-color: white;
+}
+
+.ContainerContacto-datos-contacto-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.FormularioContacto {
     width: 95%;
     height: 100%;
 
@@ -294,8 +332,8 @@ body {
     z-index: 1;
 }
 
-.FormularioContacto-entradas{
-    
+.FormularioContacto-entradas {
+
     padding: 2rem;
     width: 75%;
     border: 1px solid white;
@@ -303,11 +341,10 @@ body {
     color: white;
     font-size: 1em;
     margin: 0.8em
-
 }
 
-.FormularioContacto-entradas--nombre{
-    
+.FormularioContacto-entradas--nombre {
+
     padding: 2rem;
     width: 90%;
     border: 1px solid white;
@@ -315,14 +352,14 @@ body {
     color: white;
     font-size: 1em;
     margin: 0.8em
-
 }
 
-label{
+label {
     margin: 0.8em
 }
-.FormularioContacto-entradaTexto{
-    
+
+.FormularioContacto-entradaTexto {
+
 
     border: 1px solid white;
     background-color: black;
@@ -330,12 +367,10 @@ label{
     font-size: 1.3em;
     padding: 1rem;
     margin: 0.8em
-  
-
 }
 
-.FormularioContacto-boton{
-    
+.FormularioContacto-boton {
+
 
     border: 1px solid white;
     background-color: black;
@@ -343,11 +378,9 @@ label{
     font-size: 1.3em;
     padding: 1rem;
     margin: 0.8em
-  
-
 }
 
-.FormularioContacto-entradas::placeholder{
+.FormularioContacto-entradas::placeholder {
     color: white;
 
 }
@@ -395,8 +428,9 @@ label{
     margin-left: 10px;
 }
 
-.u-flexColumn{
-    display: flex; flex-direction: column;
+.u-flexColumn {
+    display: flex;
+    flex-direction: column;
 }
 
 /*visibilidad del menu*/
@@ -477,37 +511,178 @@ label{
 
 /*Objetos pequeños*/
 
-@media( max-width: 400px){
+@media(max-width: 400px) {
 
     .Filtros {
-        
+
         height: 350px;
-      
+
     }
 
 }
 
-@media( min-width: 800px){
+@media(min-width: 800px) {
 
     .ContenedorProyectos {
-     
+
         flex-direction: row;
     }
 
-    #FallaSection{
+    #FallaSection {
         width: 50%;
     }
 
-    #CeiSection{
+    #CeiSection {
         width: 50%;
     }
 
-    .showFiltro{
+    .showFiltro {
         transform: translate(61%, -50%);
     }
 
+    .ContainerContacto {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ContainerContacto-imagenPerfil {
+        width: 60%;
+
+    }
+
+    .ContainerContacto-datos {
+
+        font-size: 1.4em;
+
+    }
+
+    .showI.activeE {
+        height: calc(48px * 2.8);
+
+
+    }
+
+    .showI.activeL {
+        height: calc(70px * 4.2);
+
+    }
+
+    .showI.activeC {
+        height: calc(100px * 3.9);
+
+    }
+
+    .ContainerContacto-datos-contacto-buscar {
+
+        width: 300px;
+    }
+
+    /**/
+    .HeaderPrincipal-nav-name {
+        font-size: 3.5em;
+    }
+
+    .HeaderPrincipal-nav-menu {
+        width: 70px;
+        height: 70px;
+    }
+
+    .HeaderPrincipal-nav {
+        background-color: black;
+    }
+
+    .show.active {
+        height: 140px;
+    }
+
+    .HeaderPrincipal-sections-lista {
+        font-size: 2em;
+    }
 }
 
+@media(min-width: 1200px) {
+
+    /*HOME*/
+    .ContenedorProyectos-proyecto-titulo {
+        font-size: 3em;
+    }
+
+    .ContenedorProyectos-apartado {
+        font-size: 2em;
+    }
+
+
+    .ChipsFiltro {
+        font-size: 2.5em;
+    }
+
+    .ContenedorProyectos-proyecto-fondo {
+        height: 79px;
+        filter: blur(50px);
+    }
 
 
 
+    .Filtros-tit-flecha {
+
+        width: 60px;
+        height: 80px;
+        left: -62px;
+
+    }
+
+    .showFiltro {
+        transform: translate(62.5%, -50%);
+    }
+
+    .u-blur {
+        filter: blur(10px);
+    }
+
+    /*CONTACTO*/
+
+    .showI.activeE {
+        height: calc(48px * 4.1);
+
+
+    }
+
+    .showI.activeL {
+        height: calc(70px * 5.9);
+
+    }
+
+    .showI.activeC {
+        height: calc(100px * 5.5);
+
+    }
+
+    .ContainerContacto {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+
+    }
+
+    .ContainerContacto-datos {
+        padding: 40px;
+        overflow: auto;
+        height: 73vh;
+    }
+
+    .ContainerContacto-imagenPerfil {
+        margin-top: 40px;
+        width: 60%;
+
+    }
+
+   
+    .ContainerContacto-datos-dato {
+        margin-top: 10px;
+        width: 50%;
+      }
+
+
+}
