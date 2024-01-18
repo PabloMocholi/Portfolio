@@ -42,7 +42,7 @@ body {
 .HeaderPrincipal-nav-name {
     font-weight: 700;
     font-size: 1.5em;
-  
+
 }
 
 .HeaderPrincipal-nav-menu {
@@ -67,8 +67,8 @@ body {
     text-decoration: none;
     color: white;
     font-size: 1.1em;
-   display: block;
-   padding: 5px;
+    display: block;
+    padding: 5px;
 
 
 }
@@ -267,6 +267,16 @@ body {
 
 }
 
+.Filtros-tit--search:hover {
+
+
+    background-color: white;
+    color: black;
+    cursor: pointer;
+
+}
+
+
 
 
 .Filtro {
@@ -275,6 +285,52 @@ body {
     padding: 0.7rem;
     border-radius: 10px;
 }
+
+/*
+*   Proyecto 
+*/
+
+.ContainerProyecto {
+    margin-top: 75px;
+}
+
+.ContainerProyecto-imagen {
+    width: 100%
+}
+
+.ContainerProyecto-datos {
+    padding: 20px;
+    text-align: justify;
+}
+
+.ContainerProyecto-datos-tit {
+    font-size: 200%;
+    font-weight: 600
+}
+
+.ContainerProyecto-datos-apartado {
+    font-size: 140%;
+    font-weight: 300
+}
+.ContainerProyecto-datos-descripcion{
+    margin-top:12px
+}
+.ContainerProyecto-datos-lista{
+    padding:12px; margin:0 
+}
+.ContainerProyecto-datos-lista-elemento{
+    margin-bottom: 10px;
+}
+
+
+.ContainerProyecto-datos-flechas{
+    display:flex; justify-content:space-around;
+}
+
+.ContainerProyecto-datos-flechas-flecha{
+    width:40px;
+}
+
 
 /*
 *   Contacto 
@@ -445,8 +501,9 @@ label {
     transform: translate(-50%, -50%);
     transition: top 0.5s;
 }
+
 .u-posTop.active {
-   
+
     top: 10%;
 
 }
@@ -477,6 +534,10 @@ label {
     margin-bottom: 20px;
 }
 
+.u-marginBottom10 {
+    margin-bottom: 10px;
+}
+
 
 .u-marginLeft5 {
     margin-left: 10px;
@@ -487,12 +548,12 @@ label {
     flex-direction: column;
 }
 
-.u-notDecorar{
+.u-notDecorar {
     text-decoration: none;
     color: white
 }
 
-.u-paddingTop5{
+.u-paddingTop5 {
     padding-top: 5px;
 }
 
@@ -658,7 +719,7 @@ label {
         background-color: black;
     }
 
-   
+
 
     .HeaderPrincipal-sections-lista {
         font-size: 1.2em;

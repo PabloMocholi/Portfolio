@@ -42,42 +42,40 @@ function rellenar() {
 
     proyectoElegido.detalles.forEach((d) => {
 
-        detalles += `<li style="margin-bottom: 10px">` + d + "</li>";
+        detalles += `<li class="ContainerProyecto-datos-lista-elemento">` + d + "</li>";
 
     });
 
 
     presentacion.innerHTML = `<div>
-            <img src="${proyectoElegido.imagen}" alt="imagenProyecto" style="width:100%" >
+            <img src="${proyectoElegido.imagen}" alt="imagenProyecto" class="ContainerProyecto-imagen" >
             
             </div>`
 
-    contenido.innerHTML = `<div style="padding:20px; text-align: justify; ">
-            <span style="font-size:200%; font-weight:600"> ${proyectoElegido.nombre}</span> <br><br>
+    contenido.innerHTML = `<div class="ContainerProyecto-datos" >
+                    <span class="ContainerProyecto-datos-tit"> ${proyectoElegido.nombre}</span> <br><br>
             
-            <div>
-            <span style="font-size:140%; font-weight:300">Descripción</span><br><br>
-            <span style="margin-top:12px">${proyectoElegido.descripcion}</span>
-            </div>
-            <br><br>
-            <div>
-            <span style="font-size:140%; font-weight:300">Detalles técnicos</span>
-            <ul style="padding:12px; margin:0">${detalles}</ul>
-            </div>
+                <div>
+                    <span class="ContainerProyecto-datos-apartado" >Descripción</span><br><br>
+                    <span class="ContainerProyecto-datos-descripcion">${proyectoElegido.descripcion}</span>
+                </div>
+                <br><br>
+                <div>
+                    <span class="ContainerProyecto-datos-apartado" >Detalles técnicos</span>
+                    <ul class="ContainerProyecto-datos-lista">${detalles}</ul>
+                </div>
             </div>`
 
     galeria.innerHTML = `
-        <div style="padding:20px; text-align: justify; ">
-              <span style="font-size:140%; font-weight:300">Multimedia</span> <br><br>
+        <div class="ContainerProyecto-datos" >
+              <span class="ContainerProyecto-datos-apartado" >Multimedia</span> <br><br>
             <section id="multimedia">
 
             </section>  
      
-            <div style="display:flex; justify-content:space-around;">
-                <img src="./imgs/arrow_inverse.png" alt="" style=" width:30px" onclick="pasarFoto('anterior')">
-                <img src="./imgs/arrow.png" alt="" style=" width:30px" onclick="pasarFoto('siguiente')">
-               
-               
+            <div class="ContainerProyecto-datos-flechas">
+                <img src="./imgs/arrow_inverse.png" alt="flecha1" class="ContainerProyecto-datos-flechas-flecha" onclick="pasarFoto('anterior')">
+                <img src="./imgs/arrow.png" alt="flecha2"  class="ContainerProyecto-datos-flechas-flecha" onclick="pasarFoto('siguiente')">
             </div>
         </div>`;
 
@@ -86,9 +84,9 @@ function rellenar() {
 
 function anaydirMultimedia() {
 
-   
 
-    
+
+
     const multi = document.getElementById("multimedia");
 
     proyectoElegido.multimedia.forEach((m) => {
@@ -98,13 +96,13 @@ function anaydirMultimedia() {
     console.log(videos)
 
     multi.innerHTML = `
-        <img id="multiIMG" src="${videos[contador]}" alt="video" style="width:100%">`
+        <img id="multiIMG" src="${videos[contador]}" alt="video" class="ContainerProyecto-imagen " >`
 
     interval = setInterval(() => pasarFoto('siguiente'), 5000);
 }
 
 function pasarFoto(accion) {
-  
+
     const imagen = document.getElementById("multiIMG");
     if (accion == "siguiente") {
 
@@ -132,8 +130,8 @@ function pasarFoto(accion) {
 
     }
 
-     clearInterval(interval);
-     interval = setInterval(() => pasarFoto('siguiente'), 5000);
+    clearInterval(interval);
+    interval = setInterval(() => pasarFoto('siguiente'), 5000);
 
 }
 
