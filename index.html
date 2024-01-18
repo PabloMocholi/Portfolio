@@ -5,14 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/portfolio.css">
-
     <title>Welcome</title>
-    <style>
-      
-    </style>
+    <!--
+        Primera página que se muestra cuando el usuario llega a la web
+    -->
 </head>
 
 <body class="BodyIndex">
+
+    <!--
+        Código para crear el fondo con mi nombre
+    -->
     <div class="BodyIndex-nombres">
         <span class="BodyIndex-nombres-nombre u-bordeTexto--white ">pxblo</span>
         <span class="BodyIndex-nombres-nombre u-bordeTexto--white ">pxblo</span>
@@ -24,31 +27,24 @@
         <span class="BodyIndex-nombres-nombre u-bordeTexto--white ">pxblo</span>
     </div>
 
-
-
+    <!-- Este div centra el contenedor donde se introduce caracter a caracter el texto de bienvenida  -->
     <div class=" u-centrar">
-
         <h1 id="titIndex" class="BodyIndex-tituloBienvenida"></h1><br>
-
-
     </div>
 
+   <!-- Enlace a la pantalla principal-->
     <a href="home.html" class="BodyIndex-explorar" >
         <span class="BodyIndex-explorar-texto">EXPLORAR</span>
        
     </a>
 
+    <!-- Este div aparece y desaparece en los primeros segundos para aporta unas indicaciones -->
     <div id="alert" style="display: flex; align-items: center;" class="u-posTop">
         <img src="./imgs/warning.png" alt="cuidao" style="width: 40px; height: 40px;">
         <span> Traducir la página alterará la animación</span>
     </div>
-      
 
-    
-
-
-    <p id="demo"></p>
-
+    <!-- Llamada al documento con el script correspondiente -->
     <script src="./js/index.js"></script>
 </body>
 

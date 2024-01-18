@@ -10,24 +10,36 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="./css/portfolio.css">
-    <title>Document</title>
+    <title>pxblo</title>
+    <!--
+        Página principal del portfolio donde se listan los proyectos
+    -->
 </head>
 
 <body>
 
+    <!-- Header común en todas las páginas que permite la navegación entre las páginas-->
     <header class="HeaderPrincipal" id="header">
         <nav class="HeaderPrincipal-nav">
 
-            <a href="home.html" class="u-notDecorar"><span class="HeaderPrincipal-nav-name u-bordeTexto">pxblo</span></a>
+            <!-- enlace a la página principal -->
+            <a href="home.html" class="u-notDecorar"><span
+                    class="HeaderPrincipal-nav-name u-bordeTexto">pxblo</span></a>
+
+            <!-- icono de menú que despliega el nav -->
             <img class="HeaderPrincipal-nav-menu" src="./imgs/menuwhite.png" alt="menu" onclick="menuMostrar()">
 
         </nav>
-        <section id="menu" class="HeaderPrincipal-sections  show">
 
+        <!-- Contenedor del nav -->
+        <section id="menu" class="HeaderPrincipal-sections  show">
+            <!-- Lista de las páginas por las que el usuario puede navegar -->
             <ul class="HeaderPrincipal-sections-lista">
+                <!-- enlace a página principal -->
                 <a class="HeaderPrincipal-sections-lista-link" href="#">
                     <li>Proyectos</li>
                 </a>
+                <!-- enlace a página de contacto -->
                 <a class="HeaderPrincipal-sections-lista-link" href="contacto.html">
                     <li>Contacto</li>
                 </a>
@@ -36,34 +48,39 @@
         </section>
     </header>
 
+    <!-- Contenedor principal de la página donde se dividen dos secciones en función de la categoría de los proyectos-->
     <main class="ContenedorProyectos" id="main">
+        <!-- Sección 1 -->
         <section id="FallaSection">
             <h3 class="ContenedorProyectos-apartado">Falla Immaterial 2022/2023</h3>
         </section>
+
+        <!-- Sección 2-->
         <section id="CeiSection">
             <h3 class="ContenedorProyectos-apartado">Proyectos Máster</h3>
         </section>
     </main>
 
+    <!-- Sección que lista las distintas keywords o etiquetas las cuales se pueden seleccionar para realizar un filtrado-->
     <section id="filtros" class="Filtros showFiltro">
         <div style="position: relative;">
-            <span class="Filtros-tit">Filtrar
-                Proyectos</span>
+            <span class="Filtros-tit">Filtrar Proyectos</span>
 
-
+            <!-- Contenedor donde se listaran las etiquetas (se introducen desde js)-->
             <div id="filtrado" class="ChipsFiltro ChipsFiltro--filtrado">
             </div>
+
+            <!-- Botón que llama a la función de filtrar -->
             <span class="Filtros-tit Filtros-tit--search" onclick="filtradoTags()">Filtrar</span>
 
-
+            <!-- Imagen que permite desocultar la sección de los filtros cambiando su posición en la pantalla -->
             <img src="imgs/arrowright.jpg" alt="flecha" onclick="filtroMostrar()" class="Filtros-tit-flecha">
-        </div>
         </div>
 
     </section>
 
-
 </body>
+<!-- Llamada al documento con el script correspondiente -->
 <script src="./js/home.js"></script>
 
 </html>

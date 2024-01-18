@@ -630,6 +630,7 @@ label {
     display: flex;
     gap: 10px;
     overflow: auto;
+    
 
 }
 
@@ -739,12 +740,16 @@ label {
 @media(min-width: 1200px) {
 
     /*HOME*/
+
+    .ContenedorProyectos{
+        margin-top: 60px;
+    }
     .ContenedorProyectos-proyecto-titulo {
-        font-size: 3em;
+        font-size: 2em;
     }
 
     .ContenedorProyectos-apartado {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
 
@@ -774,6 +779,21 @@ label {
     .u-blur {
         filter: blur(10px);
     }
+
+    /*PROYECTO*/
+    .ContainerProyecto-imagen{
+        width: 90%;
+        display: block;
+        margin: auto;
+
+    }
+    #multiIMG{
+        width: 60%;
+    }
+    .insta{
+        justify-content: space-around;
+    }
+
 
     /*CONTACTO*/
 

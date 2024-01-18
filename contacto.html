@@ -10,77 +10,94 @@
         rel="stylesheet">
     <link rel="stylesheet" href="./css/portfolio.css">
     <title>Contacto</title>
+    <!--
+        Página pde contacto
+    -->
 </head>
 
 <body>
+    <!-- Header común en todas las páginas que permite la navegación entre las páginas-->
     <header class="HeaderPrincipal" id="header">
         <nav class="HeaderPrincipal-nav">
-
-            <a href="home.html" class="u-notDecorar"><span class="HeaderPrincipal-nav-name u-bordeTexto">pxblo</span></a>
-
+            <!-- enlace a la página principal -->
+            <a href="home.html" class="u-notDecorar"><span
+                    class="HeaderPrincipal-nav-name u-bordeTexto">pxblo</span></a>
+            <!-- icono de menú que despliega el nav -->
             <img class="HeaderPrincipal-nav-menu" src="./imgs/menuwhite.png" alt="menu" onclick="menuMostrar2()">
 
         </nav>
-        <section id="menu" class="HeaderPrincipal-sections  show">
 
+        <!-- Contenedor del nav -->
+        <section id="menu" class="HeaderPrincipal-sections  show">
+            <!-- Lista de las páginas por las que el usuario puede navegar -->
             <ul class="HeaderPrincipal-sections-lista">
+                <!-- enlace a página principal -->
                 <a class="HeaderPrincipal-sections-lista-link" href="home.html">
                     <li>Proyectos</li>
                 </a>
+                <!-- enlace a página de contacto -->
                 <a class="HeaderPrincipal-sections-lista-link" href="#">
                     <li>Contacto</li>
                 </a>
             </ul>
         </section>
     </header>
+
+    <!-- Contenedor principal donde se muestra toda la información de contacto -->
     <main id="main">
         <div class="ContainerContacto">
+            <!-- imagen de perfil -->
             <img src="./imgs/yo_vert.JPG" alt="Imagen Perfil" class="ContainerContacto-imagenPerfil">
-
+            <!-- sección donde se lista toda la información -->
             <section class="ContainerContacto-datos" id="sectionPrincipal">
             </section>
         </div>
-
     </main>
 
-   
-    <form id="formContacto" class="FormularioContacto u-centrar isnot_shown" action="contacto.html" method="get" >
-       <div style="display: flex; align-items: center; justify-content: space-between;">
-        <span style="font-size: 1.5em; text-align: center; display: block; padding: 20px;">CONTACTA CONMIGO</span>
-        <img onclick="abrecierraForm()" src="./imgs/close.png" alt="cerrar" style="width: 20px; height: 20px;">
-       </div> 
+    <!-- Formulario de contacto-->
+    <form id="formContacto" class="FormularioContacto u-centrar isnot_shown" action="contacto.html" method="get">
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-size: 1.5em; text-align: center; display: block; padding: 20px;">CONTACTA CONMIGO</span>
+            <img onclick="abrecierraForm()" src="./imgs/close.png" alt="cerrar" style="width: 20px; height: 20px;">
+        </div>
 
+
+        <!-- inputs del nombre -> label + input -->
         <div style="display: flex; flex-wrap: wrap;">
-            <div class="FormularioContacto-nombre" >
+            <div class="FormularioContacto-nombre">
                 <label for="nombre">Nombre</label><br>
-                <input class="FormularioContacto-entradas--nombre" type="text" id="nombre" name="nombre" placeholder="Nombre"><br>
+                <input class="FormularioContacto-entradas--nombre" type="text" id="nombre" name="nombre"
+                    placeholder="Nombre"><br>
             </div>
-            <div class="FormularioContacto-nombre" >
+            <div class="FormularioContacto-nombre">
                 <label for="apellido">Apellido</label><br>
-                <input  class="FormularioContacto-entradas--nombre" type="text" id="apellido" name="apellido" placeholder="Apellidos"><br>
+                <input class="FormularioContacto-entradas--nombre" type="text" id="apellido" name="apellido"
+                    placeholder="Apellidos"><br>
             </div>
 
         </div>
         <br>
-        
+
+        <!-- listado del resto de los inputs del form -> label + input -->
         <label for="email">Email</label><br>
-        <input class="FormularioContacto-entradas" type="email" id="email" name="email" placeholder="tucorreo@gmail.es"><br><br>
-        
+        <input class="FormularioContacto-entradas" type="email" id="email" name="email"
+            placeholder="tucorreo@gmail.es"><br><br>
+
         <label for="tel">Teléfono</label><br>
         <input class="FormularioContacto-entradas" type="tel" id="tel" name="tel" placeholder="+34 666 666 666"><br><br>
-        
+
         <label for="asunto">Asunto</label><br>
         <input class="FormularioContacto-entradas" type="text" id="asunto" name="asunto" placeholder="Asunto"><br><br>
-        
+
         <label for="mensaje">Mensaje</label><br>
         <textarea class="FormularioContacto-entradaTexto" name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
         <br><br>
         <input class="FormularioContacto-boton" type="submit" value="Enviar">
 
     </form>
- 
 
-    
+
+
 </body>
 <script src="./js/contacto.js"></script>
 

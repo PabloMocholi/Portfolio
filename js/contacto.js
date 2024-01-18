@@ -1,3 +1,4 @@
+//Declaración de variables
 const menu = document.getElementById("menu");
 let datosEstudios;
 let datosLaboral;
@@ -5,45 +6,54 @@ let datosCompetencia;
 const sectionPrincipal = document.getElementById("sectionPrincipal");
 const formContacto = document.getElementById("formContacto");
 
+//url para el fetch
 var url = "./db/profile.json";
 
-// Uso de la función fetch
+// fetch para recibir los datos de los proyectos presente en profile.json
 fetch(url)
     .then(function (response) {
+        //comprobar si hay error el la petición
         if (!response.ok) {
             throw new Error("La solicitud no fue exitosa: " + response.status);
         }
         return response.json();
     })
     .then(function (data) {
-        console.log(data);
+        //Llamada a la función que crea todos los elementos HTML y los muestra
         anaydirDatos(data);
         setVariables();
-    
+
     })
 
-
+/**
+ * Función que se encarga que mostrar toda la información de contacto presente en profile.json
+ * parámetro de entrada = objeto json
+ */
 function anaydirDatos(objeto) {
 
+    //variables que después se añadirán al documento
     let stringEstudios = "";
     let stringTrabajo = "";
     let hardSkills = "";
     let softSkills = "";
 
+    //Recorro el array de estudios y almaceno su HTML en una variable
     objeto.estudios.forEach(e => {
 
-        stringEstudios+= `<div class="u-marginLeft5">
+        stringEstudios += `<div class="u-marginLeft5">
         <span>${e.estudio}</span>
         <br>
         <span
             class="u-marginLeft5 ContainerContacto-datos-dato-subTit ContainerContacto-datos-dato-subTit--small">${e.institucion}</span>
     </div>`
-        
+
     });
 
+
+    //Recorro el array de experiencia y almaceno su HTML en una variable
     objeto.experiencia.forEach(t => {
 
-        stringTrabajo+= ` <div class="u-marginTop5 u-marginLeft5">
+        stringTrabajo += ` <div class="u-marginTop5 u-marginLeft5">
         <span>${t.trabajo} </span>
         <br>
         <div style="display: flex; flex-direction: column;">
@@ -53,23 +63,25 @@ function anaydirDatos(objeto) {
         </div>
 
     </div>`
-        
+
     });
 
+    //Recorro el array de Softskills y almaceno su HTML en una variable
     objeto.softskills.forEach(s => {
 
-        softSkills+= `  <span class="u-marginLeft5 ContainerContacto-datos-dato-subTit"> ${s}
+        softSkills += `  <span class="u-marginLeft5 ContainerContacto-datos-dato-subTit"> ${s}
         </span>`
-        
-    });
 
+    });
+    //Recorro el array de hardskills y almaceno su HTML en una variable
     objeto.hardskills.forEach(s => {
 
-        hardSkills+= `  <span class="u-marginLeft5 ContainerContacto-datos-dato-subTit"> ${s}
+        hardSkills += `  <span class="u-marginLeft5 ContainerContacto-datos-dato-subTit"> ${s}
         </span>`
-        
+
     });
 
+    //Añado TODOS los elementos HTML en la sección principal. Como quería tratarlo como un único bloque todo se añade desde JS
     sectionPrincipal.innerHTML += `
     <div class="ContainerContacto-datos-dato">
         <h3 class="u-margin0">Nombre</h3>
@@ -154,28 +166,33 @@ function anaydirDatos(objeto) {
 
 
     </div>
-
-
-    
     `
 }
 
-function abrecierraForm(){
+/**
+ * Función que gestiona la visibilad del formulario de contacto
+ */
+function abrecierraForm() {
 
     formContacto.classList.toggle("isnot_shown");
     sectionPrincipal.classList.toggle("isnot_shown");
 
 }
 
-function setVariables(){
+//Función que almacena las secciones desplegables en una variable
+function setVariables() {
     datosEstudios = document.getElementById("datosEstudios")
     datosLaboral = document.getElementById("datosLaboral")
     datosCompetencia = document.getElementById("datosCompetecia");
-  
+
 }
 
 
-
+/**
+ * 
+ * Función simplificada del toggle del navegador de home.js (reciclada de proyecto.js)
+ *  
+ */
 function menuMostrar2() {
     menu.classList.toggle("active");
 
@@ -190,6 +207,13 @@ function menuMostrar2() {
 
 }
 
+/**
+ * 
+ * Funciín que se encarga de gestiona si el apartado seleccionada se muestra o se oculta
+ * Se utiliza del archivo css .activeE activeL activeC ya que son la altura difiere según el apartado
+ * parámatro de entrada = bloque HTML a mostrar u ocultar
+ * 
+ */
 
 function cerrar(seccion) {
 
