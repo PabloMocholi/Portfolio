@@ -888,11 +888,12 @@ label {
 
         overflow: auto;
         height: 73vh;
+        width: 70%;
     }
 
     .ContainerContacto-imagenPerfil {
         margin-top: 40px;
-        width: 55%;
+        width: 25%;
 
     }
 
