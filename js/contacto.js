@@ -148,6 +148,7 @@ function anaydirDatos(objeto) {
 
         </div>
     </div>
+    </div>
     <div class="ContainerContacto-datos-contacto">
 
         <button onclick="abrecierraForm()" class="ContainerContacto-datos-contacto-boton">Contacta conmigo</button>
@@ -157,9 +158,9 @@ function anaydirDatos(objeto) {
             <div class="ContainerContacto-datos-contacto-buscar-linea"></div>
         </div>
         <div>
-            <a target="_blank" href="https://www.instagram.com/pxblo_mocholi/"><img
+            <a title="instagram" target="_blank" href="https://www.instagram.com/pxblo_mocholi/"><img
                     src="./imgs/instaIcon.webp" alt="instagram" class="ContainerContacto-datos-contacto-icon"></a>
-            <a target="_blank"
+            <a title="linkedIn" target="_blank"
                 href="https://www.linkedin.com/in/pablo-mochol%C3%AD-gonz%C3%A1lez-b07125245/"> <img
                     src="./imgs/linkedinIcon.png" alt="instagram" class="ContainerContacto-datos-contacto-icon"></a>
         </div>
@@ -211,7 +212,7 @@ function menuMostrar2() {
  * 
  * Funciín que se encarga de gestiona si el apartado seleccionada se muestra o se oculta
  * Se utiliza del archivo css .activeE activeL activeC ya que son la altura difiere según el apartado
- * parámatro de entrada = bloque HTML a mostrar u ocultar
+ * parámetro de entrada = bloque HTML a mostrar u ocultar
  * 
  */
 

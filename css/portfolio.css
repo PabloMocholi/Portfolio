@@ -1,25 +1,23 @@
-/*
-*   General
-*/
+/*---------------------
+*
+*   Ajustes generales
+*
+-------------------------*/
 
+/*Establezco tipografía y un color de fondo para todo el proyecto*/
 :root {
-
     font-family: 'Poppins', sans-serif;
-    --color-fondo: #E0E1DD;
-    --color-primario: #0D1B2A;
-    --color-secundario: #415A77;
-    --color-detalles: #1B263B;
-    --color-clarito: #778DA9;
     background-color: black;
-
 }
 
+/* Hago un reset de todos los elementos body */
 body {
     margin: 0;
     padding: 0;
     color: white;
 }
 
+/* Propiedades que dan forma al header que se mantendrá entré páginas*/
 .HeaderPrincipal {
 
     position: fixed;
@@ -32,6 +30,7 @@ body {
 
 }
 
+/* nav con nombre + menú*/
 .HeaderPrincipal-nav {
     display: flex;
     align-items: center;
@@ -50,11 +49,13 @@ body {
     height: 30px;
 }
 
+/*menu desplegable*/
 .HeaderPrincipal-sections {
     width: 100%;
     background-color: black;
     padding-bottom: 10px;
 }
+
 
 .HeaderPrincipal-sections-lista {
     list-style-type: none;
@@ -73,16 +74,20 @@ body {
 
 }
 
-/*
+/*---------------------
+*
 *   index.html
-*/
+*
+-------------------------*/
 
+/* Usamos este pseudo-elemento after para añadir el símbolo del cursor después del caracter*/
 #titIndex::after {
     content: '|';
     display: inline-block;
     animation: parpadeo 1s infinite;
 }
 
+/*Animación de parpadeo que manipula la opacidad del elemento para hacer que vaya aparenciendo y desapareciendo*/
 @keyframes parpadeo {
 
     0% {
@@ -98,12 +103,14 @@ body {
     }
 }
 
+/* CSS base que aplica a todo el cuerpo del index */
 .BodyIndex {
 
     height: 100vh;
     background-color: black;
 }
 
+/* Ajustes del texto con animación */
 .BodyIndex-tituloBienvenida {
 
     color: white;
@@ -114,6 +121,7 @@ body {
 
 }
 
+/* Ajustes del botón que enlaza con la home */
 .BodyIndex-explorar {
     position: fixed;
     left: 50%;
@@ -123,6 +131,7 @@ body {
     text-decoration: none;
 }
 
+
 .BodyIndex-explorar-texto {
     padding: 20px;
     border-radius: 10px;
@@ -131,6 +140,7 @@ body {
     font-weight: 600;
 }
 
+/* Ajustes del texto que actúa como fondo */
 .BodyIndex-nombres {
     height: 98%;
     overflow: hidden;
@@ -146,11 +156,13 @@ body {
 }
 
 
-/*
-*  Home
-*/
+/*---------------------
+*
+*   home.html
+*
+-------------------------*/
 
-
+/* Ajustes para el contenedor de los proyectos */
 .ContenedorProyectos {
     display: flex;
     flex-direction: column;
@@ -161,14 +173,17 @@ body {
 
 }
 
+/* título de la categoría */
 .ContenedorProyectos-apartado {
     font-weight: 400;
 }
 
+/* contenido del proyecto */
 .ContenedorProyectos-proyecto {
     position: relative;
 }
 
+/* div negro que añade el efecto de desenfoque en la parte superior de la imagem */
 .ContenedorProyectos-proyecto-fondo {
     width: 110%;
     height: 40px;
@@ -179,6 +194,7 @@ body {
     top: -10px
 }
 
+/* título del proyecto */
 .ContenedorProyectos-proyecto-titulo {
     font-weight: 200;
     margin: 0;
@@ -187,11 +203,13 @@ body {
     position: absolute
 }
 
+/* imagen del proyecto */
 .ContenedorProyectos-proyecto-imagen {
     width: 100%;
 }
 
 
+/* display de las etiquetas o keywords del proyecto */
 .ChipsFiltro {
 
     display: flex;
@@ -199,11 +217,9 @@ body {
     gap: 2px;
     padding: 10px 5px 20px 5px;
     overflow: auto;
-
-
-
 }
 
+/* modificador del display de las etiquetas o keywords del proyecto para ajustarlo al menú de filtrado */
 .ChipsFiltro--filtrado {
 
     padding: 10px;
@@ -213,6 +229,7 @@ body {
 
 }
 
+/* etiquetas o keywords del proyecto */
 .ChipsFiltro-chip {
     color: black;
     background-color: white;
@@ -222,11 +239,7 @@ body {
 
 }
 
-.ChipsFiltro-chip--inverse {
-    background-color: var(--color-primario);
-}
-
-
+/* menú de filtrado */
 .Filtros {
     position: fixed;
     bottom: 0;
@@ -237,6 +250,7 @@ body {
     border: 2px solid white;
 }
 
+/* título del menú de filtrado */
 .Filtros-tit {
     display: block;
     color: white;
@@ -246,6 +260,7 @@ body {
     width: 100%;
 }
 
+/* flecha que permite mostrar u ocultar el menú */
 .Filtros-tit-flecha {
     border: 1px solid black;
     border-radius: 10px 0px 0px 10px;
@@ -256,6 +271,7 @@ body {
     top: 40%
 }
 
+/* fbotón que permite filtrar */
 .Filtros-tit--search {
     width: 20%;
     border: 1px solid white;
@@ -267,18 +283,14 @@ body {
 
 }
 
+/* Añadido un hover al botón de filtrar*/
 .Filtros-tit--search:hover {
-
-
     background-color: white;
     color: black;
     cursor: pointer;
-
 }
 
-
-
-
+/* Etiquetas con las categorías del menú de filtrado*/
 .Filtro {
     color: white;
     border: 1px solid white;
@@ -286,102 +298,131 @@ body {
     border-radius: 10px;
 }
 
-/*
-*   Proyecto 
-*/
+/*---------------------
+*
+*   proyecto.html
+*
+-------------------------*/
 
+/* Ajustes del contenedor principal para situarlo bajo el header*/
 .ContainerProyecto {
     margin-top: 75px;
 }
 
+/* Imagen del proyecto como banner y del contenido multimedia  */
 .ContainerProyecto-imagen {
     width: 100%
 }
 
+/* Sección donde se listarán todos los datos del proyecto */
 .ContainerProyecto-datos {
     padding: 20px;
     text-align: justify;
 }
 
+/* Título del proyecto seleccionado */
 .ContainerProyecto-datos-tit {
     font-size: 200%;
     font-weight: 600
 }
 
+/* Ajustes para la visualización de los datos*/
 .ContainerProyecto-datos-apartado {
     font-size: 140%;
     font-weight: 300
 }
-.ContainerProyecto-datos-descripcion{
-    margin-top:12px
+
+/* Ajustes de posicionamiento del párrafo de descripción */
+.ContainerProyecto-datos-descripcion {
+    margin-top: 12px
 }
-.ContainerProyecto-datos-lista{
-    padding:12px; margin:0 
+
+/* Ajustes del listado de detalles técnicos */
+.ContainerProyecto-datos-lista {
+    padding: 12px;
+    margin: 0
 }
-.ContainerProyecto-datos-lista-elemento{
+
+/* Ajustes de cada elemento de la lista de detalles técnicos*/
+.ContainerProyecto-datos-lista-elemento {
     margin-bottom: 10px;
 }
 
-
-.ContainerProyecto-datos-flechas{
-    display:flex; justify-content:space-around;
+/* Ajustes de posición de las flechas del carrusel*/
+.ContainerProyecto-datos-flechas {
+    display: flex;
+    justify-content: space-around;
 }
 
-.ContainerProyecto-datos-flechas-flecha{
-    width:40px;
+/* Tamaño de las flechas*/
+.ContainerProyecto-datos-flechas-flecha {
+    width: 40px;
 }
 
 
-/*
-*   Contacto 
-*/
+/*---------------------
+*
+*   contacto.html
+*
+-------------------------*/
+
+
+/* Ajustes del contenedor de toda la información*/
 .ContainerContacto {
     padding: 20px;
     margin-top: 70px;
 }
 
+/* Ajustes de la imagen  */
 .ContainerContacto-imagenPerfil {
     width: 100%;
     border-radius: 10px;
 }
 
+/* Ajustes del display de los datos personales */
 .ContainerContacto-datos {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
+/* Ajustes de los datos mostrados */
 .ContainerContacto-datos-dato {
     margin-top: 10px;
     width: 300px;
 }
 
+/* Ajuste de fuente para subtítulos */
 .ContainerContacto-datos-dato-subTit {
     font-size: 0.9em;
     font-weight: 100;
 }
 
+/* Ajuste de fuente para segundos subtítulos */
 .ContainerContacto-datos-dato-subTit--small {
     font-size: 0.8em;
 }
 
-
+/* Modificador de los datos mostrados para las categorías de Estudios, Experiencia Laboral y Competencias*/
 .ContainerContacto-datos-dato--sinLimite {
     margin-top: 10px;
     width: 100%;
 }
 
+/* Ajuste para los apartados con información desplegable */
 .ContainerContacto-datos-dato-desplegable {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+/* Ajuste de tamañao del icono para desplegar la info */
 .ContainerContacto-datos-dato-desplegable-icono {
     width: 20px;
     height: 20px;
 }
 
+/* Ajuste de posicionamiento para el apartado final con las RRSS y el botón de contacto */
 .ContainerContacto-datos-contacto {
     margin-top: 10px;
     width: 100%;
@@ -392,6 +433,7 @@ body {
     gap: 10px;
 }
 
+/* Ajustes del botón de contacto*/
 .ContainerContacto-datos-contacto-boton {
     padding: 20px;
     border-radius: 10px;
@@ -401,6 +443,7 @@ body {
     color: white;
 }
 
+/* Ajustes del contenedor que muestra el tecto "Búscame en RRSS" */
 .ContainerContacto-datos-contacto-buscar {
     display: flex;
     align-items: center;
@@ -408,29 +451,30 @@ body {
     width: 250px;
 }
 
+/* Div que hace función de línea blanca */
 .ContainerContacto-datos-contacto-buscar-linea {
     height: 2px;
     width: 30px;
     background-color: white;
 }
 
+/* Iconos de las redes sociales */
 .ContainerContacto-datos-contacto-icon {
     width: 30px;
     height: 30px;
 }
 
+/* Ajustes del contenedor que muestra el formulario de contacto */
 .FormularioContacto {
     width: 95%;
     height: 100%;
-
     background-color: black;
     font-size: 1.2em;
     overflow: auto;
     z-index: 1;
 }
-
+/* Ajustes de los inputs del formulario */
 .FormularioContacto-entradas {
-
     padding: 2rem;
     width: 75%;
     border: 1px solid white;
@@ -440,6 +484,7 @@ body {
     margin: 0.8em
 }
 
+/* Modificador de los ajustes de los inputs del formulario para el campo de nombre y apellidos */
 .FormularioContacto-entradas--nombre {
 
     padding: 2rem;
@@ -451,13 +496,14 @@ body {
     margin: 0.8em
 }
 
+/* Ajustes para todas las label*/
 label {
     margin: 0.8em
 }
 
+/* Ajustes del textarea  */
 .FormularioContacto-entradaTexto {
 
-
     border: 1px solid white;
     background-color: black;
     color: white;
@@ -466,9 +512,8 @@ label {
     margin: 0.8em
 }
 
+/* Ajustes del botón de enviar */
 .FormularioContacto-boton {
-
-
     border: 1px solid white;
     background-color: black;
     color: white;
@@ -477,16 +522,20 @@ label {
     margin: 0.8em
 }
 
+/* Ajustes del placeholder en los inputs */
 .FormularioContacto-entradas::placeholder {
     color: white;
 
 }
 
 
-/*
+/*---------------------
+*
 *   Utilidades 
-*/
+*
+-------------------------*/
 
+/* Centra el elemento a la mitad de la pantalla*/
 .u-centrar {
     position: fixed;
     left: 50%;
@@ -494,6 +543,7 @@ label {
     transform: translate(-50%, -50%);
 }
 
+/* Centra el elemento en la parte superior + transición   */
 .u-posTop {
     position: fixed;
     left: 50%;
@@ -508,10 +558,12 @@ label {
 
 }
 
+/* Efecto de desenfoque del fondo */
 .u-blur {
     filter: blur(2px);
 }
 
+/* Permite ponerle un trazo alrededor del texto */
 .u-bordeTexto {
     text-shadow: 2px 0 2px #000, -2px 0 2px #000, 0 2px 2px #000, 0 -2px 2px #000,
         1px 1px 2px #000, -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000;
@@ -522,6 +574,7 @@ label {
         1px 1px 2px #fff, -1px -1px 2px #fff, 1px -1px 2px #fff, -1px 1px 2px #fff;
 }
 
+/* Ajustes para el posicionamiento de elemntos */
 .u-margin0 {
     margin: 0;
 }
@@ -543,19 +596,22 @@ label {
     margin-left: 10px;
 }
 
+.u-paddingTop5 {
+    padding-top: 5px;
+}
+
+/* Especifica un display flex en columnas */
 .u-flexColumn {
     display: flex;
     flex-direction: column;
 }
 
+/* Elimina la decoración de enlaces */
 .u-notDecorar {
     text-decoration: none;
     color: white
 }
 
-.u-paddingTop5 {
-    padding-top: 5px;
-}
 
 /*visibilidad del menu*/
 .show {
@@ -569,7 +625,7 @@ label {
 
 }
 
-/*visibilidad de la info*/
+/*visibilidad de la información en el contacto*/
 .showI {
     height: 0px;
     transition: height 0.6s;
@@ -578,23 +634,23 @@ label {
     padding-left: 10px;
 }
 
+/* Estudios */
 .showI.activeE {
     height: calc(48px * 2.6);
 
 
 }
-
+/* Experiencia Laboral */
 .showI.activeL {
-    height: calc(70px * 3.1);
+    height: calc(70px * 3.3);
 
 }
 
+/* Competencias */
 .showI.activeC {
     height: calc(100px * 2.8);
 
 }
-
-
 
 /*visibilidad general*/
 .isnot_shown {
@@ -625,17 +681,24 @@ label {
 
 }
 
+/* Ajustes para las publicaciones de instagram de algunos proyectos*/
 .insta {
     padding: 20px;
     display: flex;
     gap: 10px;
     overflow: auto;
-    
+
 
 }
 
-/*Objetos pequeños*/
+/*---------------------
+*
+*   Ajustes para diseño responsive
+*
+*   las reglas CSS modificadas son explicadas anteriormente por lo que no se describe su comportamiento en este apartado
+-------------------------*/
 
+/* Dispositivos pequeños */
 @media(max-width: 400px) {
 
     .Filtros {
@@ -646,6 +709,7 @@ label {
 
 }
 
+/* Dispositivos medianos */
 @media(min-width: 800px) {
 
     .ContenedorProyectos {
@@ -706,7 +770,6 @@ label {
         width: 300px;
     }
 
-    /**/
     .HeaderPrincipal-nav-name {
         font-size: 2.5em;
     }
@@ -737,13 +800,14 @@ label {
 
 }
 
+/* Dispositivos grandes */
 @media(min-width: 1200px) {
 
-    /*HOME*/
 
-    .ContenedorProyectos{
+    .ContenedorProyectos {
         margin-top: 60px;
     }
+
     .ContenedorProyectos-proyecto-titulo {
         font-size: 2em;
     }
@@ -780,22 +844,22 @@ label {
         filter: blur(10px);
     }
 
-    /*PROYECTO*/
-    .ContainerProyecto-imagen{
+
+    .ContainerProyecto-imagen {
         width: 90%;
         display: block;
         margin: auto;
 
     }
-    #multiIMG{
+
+    #multiIMG {
         width: 60%;
     }
-    .insta{
+
+    .insta {
         justify-content: space-around;
     }
 
-
-    /*CONTACTO*/
 
     .showI.activeE {
         height: calc(48px * 3.1);

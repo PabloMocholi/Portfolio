@@ -93,7 +93,7 @@ function mostrarProyecto() {
 function nuevoHTML(seccion, p, tags) {
 
     seccion.innerHTML += `<article class="u-marginBottom5">
-    <a href="proyecto.html?id=${p.id}" style="text-decoration:none">
+    <a href="proyecto.html?id=${p.id}" title="proyecto" style="text-decoration:none">
         <div class="ContenedorProyectos-proyecto">
     
             <div class="ContenedorProyectos-proyecto-fondo">
