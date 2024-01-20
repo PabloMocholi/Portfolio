@@ -55,7 +55,7 @@
         "nombre": "AI-RITMO",
         "imagen": "./imgs/airitmo.png",
         "etiquetas": ["HTML","CSS","JavaScript"],
-        "descripcion":""
+        "descripcion":"<i>AI-RITMO</i> fue el último de los proyectos que se desarrollaron en el máster. Una de las principales diferencias fue que el diseño de esta aplicación debía ser mobile first por lo que todas sus pantallas se implementaron para dispositivos móviles. <br><br> Esta aplicación debía ser un reproductor de música, pero debíamos añadir un elemento que simulara una inteligencia artificial. En este caso se utilizo la animación de una astronauta: Pepita Ritmo. Este elemento era simplemente visual, aunque se implementaron funcionalidades de manera que al pulsar sobre Pepita Ritmo te seleccionara una canción aleatoria del repertorio disponible. El resto de la aplicación es muy similar a culaquier otro reproductor, pudiendo acceder a una lista de temas destacados, el perfil de los artistas..."
         ,"detalles":["Diseño mobile first","Animaciones y transiciones","Menús desplegables","Uso de fetch para la lectura de datos desde .json"]
         ,"multimedia":["./imgs/ai1.png","./imgs/ai2.png","./imgs/ai3.png","./imgs/ai4.png","./imgs/ai5.png"]
     }
